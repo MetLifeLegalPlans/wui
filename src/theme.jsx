@@ -1,8 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import { createMuiTheme } from '@material-ui/core/styles';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import planHealthMeterGradient from './planHealthMeter';
 
 import { addTypography } from './basics/typography';
@@ -15,7 +12,7 @@ const textboxFocus = '#4c84f5';
 const panelBorder = '#DBDCE2';
 const unselectedTab = '#f4f5f7';
 
-export const theme = createMuiTheme({
+const theme = createMuiTheme({
   typography: {
     fontFamily: ['AvertaPE', 'Roboto'],
   },
@@ -207,18 +204,4 @@ theme.layout.disabledNode = {
 };
 theme.layout.paperPadding = 32;
 
-const Theme = ({ children }) => (
-  <MuiThemeProvider theme={theme}>
-    <React.Fragment>
-      <CssBaseline />
-
-      {children}
-    </React.Fragment>
-  </MuiThemeProvider>
-);
-
-Theme.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-export default Theme;
+export default theme;
