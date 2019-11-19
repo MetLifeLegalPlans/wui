@@ -1,7 +1,3 @@
-const path = require('path');
-
-const srcRoot = path.join(__dirname, 'src');
-
 module.exports = {
   presets: [
     [
@@ -17,10 +13,10 @@ module.exports = {
     [
       'module-resolver',
       {
-        root: [srcRoot],
+        root: ['./src/'],
         alias: {
-          '@': srcRoot,
-          '@a': path.join(srcRoot, 'assets'),
+          '@': './src/',
+          '@a': './src/assets/',
         },
       },
     ],
