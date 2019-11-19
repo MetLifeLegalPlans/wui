@@ -1,7 +1,6 @@
 {
-  "name": "wui",
+  "name": "@bequestinc/wui",
   "version": "1.0.0",
-  "main": "dist/index.js",
   "author": "Bequest, Inc.",
   "license": "MIT",
   "private": false,
