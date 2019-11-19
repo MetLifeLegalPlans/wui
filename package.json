@@ -46,7 +46,7 @@
     "core-js": "2",
     "date-fns": "^2.8.0",
     "deepmerge": "^4.2.2",
-    "downshift": "^3.4.1",
+    "downshift": "2.0.9",
     "material-ui-pickers": "^2.2.4",
     "prop-types": "^15.7.2",
     "react-slick": "^0.25.2"
