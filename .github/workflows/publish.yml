@@ -19,8 +19,8 @@ jobs:
         run: yarn install
       - name: Build project
         run: yarn build
-      - name: Copy dependencies
-        run: cp -r src/assets package.json dist/
+      - name: Copy package.json
+        run: cp -r package.json dist/
       - name: Publish to NPM
         run: yarn publish dist/ --non-interactive
         env:

@@ -8,8 +8,8 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 import CheckboxCheckedActiveUrl from '@a/images/checkbox-checked-active.svg';
 import CheckboxUncheckedActiveUrl from '@a/images/checkbox-unchecked-active.svg';
-import { ReactComponent as CheckboxChecked } from '@a/images/checkbox-checked.svg';
-import { ReactComponent as CheckboxUnchecked } from '@a/images/checkbox-unchecked.svg';
+import CheckboxChecked from '@a/images/checkbox-checked.svg';
+import CheckboxUnchecked from '@a/images/checkbox-unchecked.svg';
 
 const muiCheckboxStyles = {
   root: {

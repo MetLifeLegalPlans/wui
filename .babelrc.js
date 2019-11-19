@@ -21,6 +21,15 @@ module.exports = {
       },
     ],
     [
+      'import-static-files',
+      {
+        extensions: ['.png'],
+        srcDir: './src/',
+        outDir: './dist/',
+      },
+    ],
+    'inline-react-svg',
+    [
       '@babel/plugin-proposal-decorators',
       {
         legacy: true,
