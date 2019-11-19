@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import { withStyles } from '@material-ui/core/styles';
-import { capitalize } from '@material-ui/core/utils';
+import { capitalize } from '@/utils';
 
 import Typography from '@/basics/typography';
 

@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
 import MaterialTextField from '@material-ui/core/TextField';
-
-const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1);
+import { capitalize } from '@/utils';
 
 const inputFontSize = 18;
 export const topMargin = 16;
