@@ -1,8 +1,8 @@
 import React from 'react';
 import MuiLink from '@material-ui/core/Link';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     alignItems: 'center',
     display: 'inline-flex',
@@ -18,12 +18,15 @@ const styles = theme => ({
       color: theme.palette.blue.checkboxCheck,
     },
   },
-});
+}));
 
-export default withStyles(styles)(({ classes, target: externalTarget, ...rest }) => {
+const Link = ({ target: externalTarget, ...rest }) => {
+  const classes = useStyles();
   // Clear the target unless it is explicitly specified
   //   so that React Router links work as intended.
   const target = typeof externalTarget === 'undefined' ? null : externalTarget;
 
   return <MuiLink target={target} underline="always" TypographyClasses={classes} {...rest} />;
-});
+};
+
+export default Link;
