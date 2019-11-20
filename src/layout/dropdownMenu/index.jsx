@@ -44,6 +44,7 @@ const DropdownMenu = ({ options: externOptions, onSelect, listRef, ...props }) =
     disablePadding: true,
     ...externListProps,
     ref: listRef,
+    variant: 'menu',
   };
 
   return (
@@ -61,6 +62,12 @@ const DropdownMenu = ({ options: externOptions, onSelect, listRef, ...props }) =
         horizontal: 'right',
       }}
       MenuListProps={MenuListProps}
+      autoFocus={false}
+      disableAutoFocusItem={true}
+      variant="menu"
+      disableAutoFocus={true}
+      disableRestoreFocus={true}
+      disableEnforceFocus={true}
       {...rest}
     >
       {options.map(option => (
