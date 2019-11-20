@@ -1,4 +1,4 @@
-name: Publish NPM Package
+name: Publish NPM Package and Documentation
 
 'on':
   push:
@@ -25,3 +25,26 @@ jobs:
         run: yarn publish dist/ --non-interactive
         env:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+  document:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '3.7'
+          architecture: 'x64'
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '13.x'
+      - name: Install dependencies
+        run: yarn install
+      - name: Install AWS cli
+        run: pip install awscli
+      - name: Build storybook documentation
+        run: yarn build-storybook
+      - name: Upload storybook documentation
+        working-directory: storybook-static
+        run: aws s3 sync . s3://com.willing.storybook/
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.DOC_UPLOAD_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.DOC_UPLOAD_SECRET_KEY }}
