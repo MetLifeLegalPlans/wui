@@ -6,8 +6,8 @@ module.exports = {
     {
       name: 'Getting Started',
       sections: [
-        { name: 'Quick Start', content: 'src/info/quickstart.md' },
         { name: 'Installation', content: 'src/info/installation.md' },
+        { name: 'Quick Start', content: 'src/info/quickstart.md' },
       ],
     },
     { name: 'Basics', components: 'src/basics/*.jsx', sectionDepth: 2 },
