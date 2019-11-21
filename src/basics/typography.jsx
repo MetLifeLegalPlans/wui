@@ -132,11 +132,19 @@ const CUSTOM_COLORS = ['disabled'];
 
 class Typography extends React.PureComponent {
   static propTypes = {
+    /** MUI theme color */
     color: PropTypes.string,
+
+    /** MUI typography variant */
     variant: PropTypes.string,
     bold: PropTypes.bool,
+    /** @ignore */
     theme: PropTypes.shape({}).isRequired,
+
+    /** Number of pixels to indent */
     indentLinesAfterFirst: PropTypes.number,
+
+    /** CSS display number */
     display: PropTypes.string,
   };
 

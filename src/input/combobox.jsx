@@ -164,16 +164,37 @@ const Combobox = ({
 };
 
 Combobox.propTypes = {
+  /** Logic for filtering/selecting options held in the parent component */
   getOptionsByInputValue: PropTypes.func.isRequired,
+
+  /** Action to perform when downshift input field has lost focus */
   onFocusOut: PropTypes.func,
+
+  /** The currently selected option, if any */
   selected: PropTypes.shape({ optionShape }),
+
+  /** Custom logic used to select an item */
   onSelect: PropTypes.func,
+
+  /** Whether or not to show the textfield in an error state */
   error: PropTypes.bool,
+
+  /** Text field props */
   label: PropTypes.string,
+
+  /** Text field props */
   helperText: PropTypes.string,
+
+  /** Text field props */
   onBlur: PropTypes.func,
+
+  /** Text field props */
   onFocus: PropTypes.func,
+
+  /** Unfocus the text field after selecting something */
   blurOnSelect: PropTypes.bool,
+
+  /** Used for capitalizing names or other input mutation */
   mutateInputValue: PropTypes.func,
   TextFieldComponent: PropTypes.elementType,
   dataPathOverride: PropTypes.string,

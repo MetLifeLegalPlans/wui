@@ -46,6 +46,7 @@ const CursorTextbox = withStyles({
 
 class DatePicker extends React.PureComponent {
   static propTypes = {
+    /** @ignore */
     classes: PropTypes.shape({}).isRequired,
   };
 

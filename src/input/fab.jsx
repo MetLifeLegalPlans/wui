@@ -82,8 +82,10 @@ const styles = theme => ({
 
 class Fab extends React.PureComponent {
   static propTypes = {
-    icon: PropTypes.func.isRequired,
+    icon: PropTypes.elementType.isRequired,
     label: PropTypes.string.isRequired,
+
+    /** @ignore */
     classes: PropTypes.shape({}).isRequired,
     size: PropTypes.oneOf(['small', 'large']),
     iconAlign: PropTypes.oneOf(['left', 'right']),

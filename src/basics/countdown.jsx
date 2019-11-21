@@ -30,8 +30,11 @@ const styles = theme => ({
 
 class Countdown extends React.Component {
   static propTypes = {
+    /** The function to run when the countdown is complete */
     onFinish: PropTypes.func,
+    /** A millisecond timestamp of when to end the timer */
     end: PropTypes.number.isRequired,
+    /** @ignore */
     classes: PropTypes.shape({}).isRequired,
   };
 

@@ -179,9 +179,14 @@ const Carousel = ({ classes, children, settings, className }) => {
 };
 
 Carousel.propTypes = {
+  /** @ignore */
   classes: PropTypes.shape({}).isRequired,
   children: PropTypes.node.isRequired,
+
+  /** Settings passed to react-slick */
   settings: PropTypes.shape({}),
+
+  /** root className */
   className: PropTypes.string,
 };
 

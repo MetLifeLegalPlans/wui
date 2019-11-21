@@ -83,6 +83,8 @@ class TitleWithIcon extends React.PureComponent {
     icon: PropTypes.node.isRequired,
     title: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
+
+    /** @ignore */
     classes: PropTypes.shape({}).isRequired,
   };
 

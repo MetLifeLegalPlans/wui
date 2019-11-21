@@ -21,10 +21,10 @@ jobs:
         run: yarn install
       - name: Install AWS cli
         run: pip install awscli
-      - name: Build storybook documentation
-        run: yarn build-storybook
-      - name: Upload storybook documentation
-        working-directory: storybook-static
+      - name: Build documentation
+        run: yarn styleguidist build
+      - name: Upload documentation
+        working-directory: styleguide
         run: aws s3 sync . s3://com.willing.storybook/
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.DOC_UPLOAD_ACCESS_KEY_ID }}

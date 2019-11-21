@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import MuiLink from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -27,6 +28,14 @@ const Link = ({ target: externalTarget, ...rest }) => {
   const target = typeof externalTarget === 'undefined' ? null : externalTarget;
 
   return <MuiLink target={target} underline="always" TypographyClasses={classes} {...rest} />;
+};
+
+Link.propTypes = {
+  target: PropTypes.string,
+};
+
+Link.defaultProps = {
+  target: undefined,
 };
 
 export default Link;

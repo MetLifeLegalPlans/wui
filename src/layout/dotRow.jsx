@@ -106,9 +106,12 @@ const styles = theme => ({
 
 class DotRow extends React.PureComponent {
   static propTypes = {
+    /** If the item is completed - implied by having further completed items */
     active: PropTypes.bool,
     onClick: PropTypes.func,
     children: PropTypes.node.isRequired,
+
+    /** @ignore */
     classes: PropTypes.shape({}).isRequired,
   };
 

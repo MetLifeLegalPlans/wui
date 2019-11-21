@@ -58,17 +58,18 @@ const tabStyles = theme => ({
 
 const StyledTab = withStyles(tabStyles)(MuiTab);
 
-const tabShape = PropTypes.shape({
-  disabled: PropTypes.bool,
-  name: PropTypes.node.isRequired,
-});
-
-class Tabs extends React.Component {
+class SectionTabs extends React.Component {
   static propTypes = {
     onSelect: PropTypes.func,
     selected: PropTypes.number,
+    /** @ignore */
     classes: PropTypes.shape({}).isRequired,
-    tabs: PropTypes.arrayOf(tabShape).isRequired,
+    tabs: PropTypes.arrayOf(
+      PropTypes.shape({
+        disabled: PropTypes.bool,
+        name: PropTypes.node.isRequired,
+      }),
+    ).isRequired,
   };
 
   static defaultProps = {
@@ -120,4 +121,4 @@ class Tabs extends React.Component {
   }
 }
 
-export default withStyles(styles)(Tabs);
+export default withStyles(styles)(SectionTabs);

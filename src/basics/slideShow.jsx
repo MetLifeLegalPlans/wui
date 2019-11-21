@@ -7,28 +7,28 @@ import Grid from '@/layout/grid';
 
 class SlideShow extends React.Component {
   static propTypes = {
-    // Optional external class on the root
+    /** Optional external class on the root */
     className: PropTypes.string,
 
-    // The main data structure - looks like:
+    /** The main data structure - looks like: */
     slides: PropTypes.arrayOf(
       PropTypes.shape({
-        // The "label" node
+        /** The "label" node */
         text: PropTypes.node,
 
-        // The gif or dom node to display
+        /** The gif or dom node to display */
         image: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
 
-        // (optional) The length of this slide
-        //   If not provided, defaults to the top level duration
+        /** (optional) The length of this slide.
+          If not provided, defaults to the top level duration */
         duration: PropTypes.number,
       }),
     ).isRequired,
 
-    // Default slide duration, unless otherwise specified
+    /** Default slide duration, unless otherwise specified */
     duration: PropTypes.number,
 
-    // Function to call when the slideshow is complete
+    /** Function to call when the slideshow is complete */
     complete: PropTypes.func,
 
     // TODO: Add loop functionality

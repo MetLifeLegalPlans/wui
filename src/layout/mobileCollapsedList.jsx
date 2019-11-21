@@ -22,9 +22,16 @@ const styles = theme => ({
 //   to toggle viewing the rest
 class MobileCollapsedList extends React.Component {
   static propTypes = {
+    /** @ignore */
     classes: PropTypes.shape({}).isRequired,
     children: PropTypes.node.isRequired,
+
+    /** On screen size md and lower this component will display only
+       props.initiallyShowUpTo of its children, along with a link
+       to toggle viewing the rest */
     initiallyShowUpTo: PropTypes.number,
+
+    /** @ignore */
     width: PropTypes.string.isRequired,
   };
 

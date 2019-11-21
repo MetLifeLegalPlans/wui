@@ -22,7 +22,11 @@ const styles = {
 class GenericError extends React.PureComponent {
   static propTypes = {
     message: PropTypes.node,
+
+    /** Whether or not to show a small icon */
     smallIcon: PropTypes.bool,
+
+    /** @ignore */
     classes: PropTypes.shape({}).isRequired,
   };
 

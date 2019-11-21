@@ -136,7 +136,7 @@ const makeDotRowModifier = modifier => props => {
   };
 };
 
-const TextField = ({
+const Textbox = ({
   name,
   rows,
   type,
@@ -318,71 +318,87 @@ const TextField = ({
   );
 };
 
-TextField.propTypes = {
-  // Standard input properties.
+Textbox.propTypes = {
+  /** Standard input property */
   rows: PropTypes.string,
+
+  /** Standard input property */
   name: PropTypes.string,
+
+  /** Standard input property */
   onBlur: PropTypes.func,
+
+  /** Standard input property */
   value: PropTypes.string,
+
+  /** Standard input property */
   disabled: PropTypes.bool,
+
+  /** Standard input property */
   onChange: PropTypes.func,
+
+  /** Standard input property */
   autoFocus: PropTypes.bool,
+
+  /** Standard input property */
   multiline: PropTypes.bool,
+
+  /** Standard input property */
   autoComplete: PropTypes.string,
 
-  // Input type to use for the text field
-  //   (if not a select field).
+  /** Input type to use for the text field (if not a select field). */
   type: PropTypes.string,
 
-  // An object that provides options for the field
-  //   instead of those dictated by the field type.
-  //   Each key is the value submitted by the form
-  //   and each value is what is displayed to the
-  //   user.
+  /** An object that provides options for the field
+     instead of those dictated by the field type.
+     Each key is the value submitted by the form
+     and each value is what is displayed to the
+     user. */
   options: PropTypes.shape({}),
 
-  // If options are being displayed, whether or not
-  //   to show an empty value in addition to the
-  //   valid values.
+  /** If options are being displayed, whether or not
+     to show an empty value in addition to the
+     valid values. */
   hideEmptyOption: PropTypes.bool,
 
-  // A value to use for the input element's
-  //   `data-path` property. If unset, the
-  //   path for the component is used.
+  /** A value to use for the input element's
+     `data-path` property. If unset, the
+     path for the component is used. */
   dataPathOverride: PropTypes.string,
 
-  // Functions that accept an object with
-  //   properties for the input or select
-  //   tag and returns an object that should
-  //   be used for those properties.
+  /** Function that accepts an object with
+     properties for the input tag and returns an object that should
+     be used for those properties. */
   inputPropsModifier: PropTypes.func,
+
+  /** Function that accepts an object with
+     properties for the select tag and returns an object that should
+     be used for those properties. */
   SelectPropsModifier: PropTypes.func,
 
-  // The text that should be displayed as
-  //   an error instead of the placeholder.
-  //   If a boolean is supplied, indicates
-  //   whether or not the border color
-  //   changes without displaying an error.
+  /** The text that should be displayed as
+     an error instead of the placeholder.
+     If a boolean is supplied, indicates
+     whether or not the border color
+     changes without displaying an error. */
   error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 
-  // The label to display indicating what
-  //   the field is for.
+  /** The label to display indicating what the field is for. */
   label: PropTypes.string,
 
-  // Text that indicates to the user what
-  //   the field is used for.
+  /** Text that indicates to the user what the field is used for. */
   helperText: PropTypes.string,
 
-  // Either a callback ref function or a ref object from the useRef hook
+  /** Either a callback ref function or a ref object from the useRef hook */
   inputRef: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({})]),
 
-  // Whether or not to show the placeholder
-  //   text in the textbox when the field
-  //   is focused.
+  /** Whether or not to show the placeholder
+     text in the textbox when the field
+     is focused. */
   hidePlaceholderOnFocus: PropTypes.bool,
 };
 
-TextField.defaultProps = {
+Textbox.defaultProps = {
   name: null,
   rows: null,
   error: null,
@@ -405,4 +421,4 @@ TextField.defaultProps = {
   SelectPropsModifier: props => props,
 };
 
-export default TextField;
+export default Textbox;

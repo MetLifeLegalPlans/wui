@@ -4,8 +4,13 @@ import Hidden from '@material-ui/core/Hidden';
 
 export default class Spacer extends React.PureComponent {
   static propTypes = {
+    /** Horizontal size (in `px`) */
     h: PropTypes.number,
+
+    /** Vertical size (in `px`) */
     v: PropTypes.number,
+
+    /** Sets `display: inline-flex` */
     inline: PropTypes.bool,
     content: PropTypes.node,
   };

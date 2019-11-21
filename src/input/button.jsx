@@ -162,12 +162,19 @@ const styles = theme => ({
 
 class Button extends React.PureComponent {
   static propTypes = {
+    /** Disables the button and shows a Spinner */
     processing: PropTypes.bool,
     noMinWidth: PropTypes.bool,
+    /** @ignore */
     width: PropTypes.string.isRequired,
+    /** @ignore */
     classes: PropTypes.shape({}).isRequired,
+
+    /** If a function, takes the width of the screen and returns a bool */
     fullWidth: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
     transparent: PropTypes.bool,
+
+    /** Show a box-shadow pulsing animation */
     pulse: PropTypes.bool,
   };
 

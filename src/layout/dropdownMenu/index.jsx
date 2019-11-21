@@ -78,9 +78,15 @@ const DropdownMenu = ({ options: externOptions, onSelect, listRef, ...props }) =
 };
 
 DropdownMenu.propTypes = {
+  /** `{label, value?, onClick?}` */
   options: PropTypes.arrayOf(optionShape),
+
+  /** Forwarded to MUI MenuList */
   MenuListProps: PropTypes.shape({}),
+
   onSelect: PropTypes.func,
+
+  /** Either a callback ref or result of the `useRef()` hook */
   listRef: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({})]),
 };
 

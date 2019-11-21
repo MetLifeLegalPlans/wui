@@ -83,25 +83,26 @@ const iconPanelStyles = theme => ({
   },
 });
 
-const IconPanelBase = ({ classes, icon, children, ...panelProps }) => (
+const IconPanel = ({ classes, icon, children, ...panelProps }) => (
   <div className={classes.root}>
     {icon}
     <StyledPanel {...panelProps}>{children}</StyledPanel>
   </div>
 );
 
-IconPanelBase.propTypes = {
+IconPanel.propTypes = {
+  /** @ignore */
   classes: PropTypes.shape({}).isRequired,
   icon: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
 };
-const IconPanel = withStyles(iconPanelStyles)(IconPanelBase);
+const IconPanelExport = withStyles(iconPanelStyles)(IconPanel);
 
 export {
   ExclusivePanelGroup,
   StyledPanel as ExpansionPanel,
   StyledSummary as ExpansionPanelSummary,
   StyledDetails as ExpansionPanelDetails,
-  IconPanel,
+  IconPanelExport as IconPanel,
   defaultExpandIcon,
 };

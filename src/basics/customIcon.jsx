@@ -6,12 +6,23 @@ const INLINE = 'inline';
 
 class CustomIcon extends React.PureComponent {
   static propTypes = {
+    /** Pixel width of the icon */
     width: PropTypes.number,
+
+    /** Pixel height of the icon */
     height: PropTypes.number,
+
+    /** Display type: `initial`, `block`, or `inline-block` */
     block: PropTypes.oneOf([false, true, INLINE]),
+
     src: PropTypes.func.isRequired,
+
+    /** @ignore */
     theme: PropTypes.shape({}).isRequired,
+
+    /** Either a function that takes the MUI theme or a hex code */
     color: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+
     opacity: PropTypes.number,
   };
 
