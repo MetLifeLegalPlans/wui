@@ -56,9 +56,14 @@ const Notice = ({ classes, children, special, primary }) => {
 };
 
 Notice.propTypes = {
+  /** @ignore */
   classes: PropTypes.shape({}).isRequired,
   children: PropTypes.node,
+
+  /** Turns it green */
   special: PropTypes.bool,
+
+  /** Turns it blue */
   primary: PropTypes.bool,
 };
 

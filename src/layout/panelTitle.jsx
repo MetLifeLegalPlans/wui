@@ -72,6 +72,8 @@ class PanelTitle extends React.PureComponent {
     simple: PropTypes.bool,
     noticeProps: PropTypes.shape({}),
     children: PropTypes.node,
+
+    /** @ignore */
     classes: PropTypes.shape({}).isRequired,
   };
 

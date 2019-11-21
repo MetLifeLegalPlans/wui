@@ -15,9 +15,14 @@ function translateToUnits(value) {
 
 export default class DimensionLimiter extends React.Component {
   static propTypes = {
+    /** Center the children horizontally */
     centerH: PropTypes.bool,
     children: PropTypes.node.isRequired,
+
+    /** Either a CSS unit expression or an integer for pixels */
     v: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /** Either a CSS unit expression or an integer for pixels */
     h: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   };
 

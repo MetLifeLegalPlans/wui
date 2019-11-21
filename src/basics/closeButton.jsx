@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   middlePosition: {},
 
   root: {
@@ -24,30 +24,27 @@ const styles = theme => ({
       bottom: 0,
     },
   },
-});
+}));
 
-class CloseButton extends React.PureComponent {
-  static propTypes = {
-    onClick: PropTypes.func.isRequired,
-    classes: PropTypes.shape({}).isRequired,
-    position: PropTypes.oneOf(['top', 'middle']),
-  };
+const CloseButton = ({ onClick, position }) => {
+  const classes = useStyles();
+  const className = classNames(classes.root, classes[`${position}Position`]);
 
-  static defaultProps = {
-    position: 'middle',
-  };
+  return (
+    <button type="button" onClick={onClick} className={className}>
+      &#x2715;
+    </button>
+  );
+};
 
-  render() {
-    const { classes, onClick, position } = this.props;
+CloseButton.propTypes = {
+  /** The function to run when this button is clicked */
+  onClick: PropTypes.func.isRequired,
+  position: PropTypes.oneOf(['top', 'middle']),
+};
 
-    const className = classNames(classes.root, classes[`${position}Position`]);
+CloseButton.defaultProps = {
+  position: 'middle',
+};
 
-    return (
-      <button type="button" onClick={onClick} className={className}>
-        &#x2715;
-      </button>
-    );
-  }
-}
-
-export default withStyles(styles)(CloseButton);
+export default CloseButton;

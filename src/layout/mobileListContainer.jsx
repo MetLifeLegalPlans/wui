@@ -31,9 +31,14 @@ const MobileListContainer = ({ classes, className, title, children }) => (
 );
 
 MobileListContainer.propTypes = {
+  /** @ignore */
   classes: PropTypes.shape({}).isRequired,
   className: PropTypes.string,
+
+  /** The title, shown only on tablet and smaller */
   title: PropTypes.string,
+
+  /** The contents, shown regardless of screensize */
   children: PropTypes.node.isRequired,
 };
 

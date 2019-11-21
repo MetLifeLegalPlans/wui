@@ -43,9 +43,16 @@ const styles = theme => ({
 
 class Modal extends React.PureComponent {
   static propTypes = {
+    /** The function to run to close the modal */
     onClose: PropTypes.func,
+
+    /** The title of the modal */
     title: PropTypes.string.isRequired,
+
+    /** The content of the modal */
     children: PropTypes.node.isRequired,
+
+    /** @ignore */
     classes: PropTypes.shape({}).isRequired,
   };
 

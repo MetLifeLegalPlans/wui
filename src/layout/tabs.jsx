@@ -121,8 +121,11 @@ class Tabs extends React.Component {
   static propTypes = {
     onSelect: PropTypes.func,
     selected: PropTypes.number,
+    /** @ignore */
     classes: PropTypes.shape({}).isRequired,
     tabs: PropTypes.arrayOf(tabShape).isRequired,
+
+    /** Allows you to fill dead space before the edge of the screen with an element */
     nextToTabs: PropTypes.node,
     noContentPadding: PropTypes.bool,
     tabsFillWidth: PropTypes.bool,

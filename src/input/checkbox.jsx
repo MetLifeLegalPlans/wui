@@ -75,7 +75,10 @@ class Checkbox extends React.Component {
   static propTypes = {
     label: PropTypes.node,
     onChange: PropTypes.func,
+    /** @ignore */
     classes: PropTypes.shape({}).isRequired,
+
+    /** `className` prop for the label */
     formControlLabelClass: PropTypes.string,
     checked: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   };

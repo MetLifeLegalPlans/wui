@@ -61,7 +61,7 @@
     "storybook": "start-storybook -p 6007",
     "build-storybook": "build-storybook",
     "build": "babel src/ --out-dir dist",
-    "lint": "eslint src/ --ext js,jsx --ignore-pattern '**/*.stories.jsx'",
-    "fix": "eslint src/ --ext js,jsx --ignore-pattern '**/*.stories.jsx' --fix"
+    "lint": "eslint src/ --ext js,jsx",
+    "fix": "eslint src/ --ext js,jsx --fix"
   }
 }

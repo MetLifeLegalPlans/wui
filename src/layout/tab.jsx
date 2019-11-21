@@ -107,6 +107,7 @@ const Tab = props => {
 
 Tab.propTypes = {
   label: PropTypes.node.isRequired,
+  /** @ignore */
   classes: PropTypes.shape({}).isRequired,
   noticeText: PropTypes.string,
   hasNotice: PropTypes.bool,

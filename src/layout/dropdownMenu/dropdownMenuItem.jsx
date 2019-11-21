@@ -44,10 +44,11 @@ const DropdownMenuItem = React.forwardRef(({ classes, label, selected, ...rest }
 });
 
 DropdownMenuItem.propTypes = {
+  /** @ignore */
   classes: PropTypes.shape({}).isRequired,
   label: PropTypes.string.isRequired,
 
-  // Used for manual highlighting with downshift or a manually generated menu
+  /** Used for manual highlighting with downshift or a manually generated menu */
   selected: PropTypes.bool,
 };
 

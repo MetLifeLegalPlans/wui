@@ -65,10 +65,13 @@ const styles = theme => ({
 
 class RadioGroup extends React.Component {
   static propTypes = {
+    /** Show traditional dot-style instead of boxes */
     dots: PropTypes.bool,
     label: PropTypes.string,
     disabled: PropTypes.bool,
     onChange: PropTypes.func,
+
+    /** @ignore */
     classes: PropTypes.shape({}).isRequired,
     withDeselectedBackground: PropTypes.bool,
     value: PropTypes.oneOfType([PropTypes.bool, PropTypes.number, PropTypes.string]),

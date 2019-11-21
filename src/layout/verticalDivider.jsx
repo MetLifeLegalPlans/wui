@@ -13,8 +13,13 @@ const VerticalDivider = ({ classes, h, spacing }) => (
 );
 
 VerticalDivider.propTypes = {
+  /** @ignore */
   classes: PropTypes.shape({}).isRequired,
+
+  /** Height in `px` */
   h: PropTypes.number,
+
+  /** Horizontal margin in `px` */
   spacing: PropTypes.number,
 };
 

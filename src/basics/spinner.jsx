@@ -42,9 +42,16 @@ const styles = {
 
 class Spinner extends React.PureComponent {
   static propTypes = {
+    /** Returns a valid CSS color */
     color: PropTypes.func,
+
+    /** Returns a valid CSS color */
     background: PropTypes.func,
+
+    /** @ignore */
     theme: PropTypes.shape({}).isRequired,
+
+    /** @ignore */
     classes: PropTypes.shape({}).isRequired,
   };
 

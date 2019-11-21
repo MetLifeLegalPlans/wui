@@ -240,23 +240,53 @@ const styles = theme => ({
 
 class Panel extends React.PureComponent {
   static propTypes = {
+    /** Adds a dropshadow/z-index increase */
     active: PropTypes.bool,
+
+    /** Changes the border to dashed */
     dashed: PropTypes.bool,
+
+    /** Green gradient or blue gradient */
     indicatorVariant: PropTypes.oneOf(['primary', 'alternate']),
+
+    /** Disables the negative padding for the indicator */
     indicatorMovesContent: PropTypes.bool,
     disabled: PropTypes.bool,
+
+    /** Removes the border */
     borderless: PropTypes.bool,
+
+    /** Sets overflow: hidden */
     noOverflow: PropTypes.bool,
+
+    /** Disables the margin */
     noMargin: PropTypes.bool,
+
+    /** Disables padding */
     paddingless: PropTypes.bool,
+
+    /** Sets less padding */
     lessPadding: PropTypes.bool,
+
+    /** Adds more padding */
     morePadding: PropTypes.bool,
+
+    /** Creates rounded corners */
     round: PropTypes.bool,
+
+    /** Panel variant - adds the indicator on top with an arrow */
     tooltip: PropTypes.bool,
+
+    /** Panel variant - implies lessPadding, and allows panels to stack together as a table */
     tableRow: PropTypes.bool,
+
+    /** If set, adds the `maxWidth` CSS property */
     maxContentWidth: PropTypes.number,
     extraVerticalPadding: PropTypes.bool,
+    /** @ignore */
     classes: PropTypes.shape({}).isRequired,
+
+    /** If set to force, puts the special indicator on even in mobile */
     special: PropTypes.oneOf([false, true, SPECIAL_FORCE]),
   };
 

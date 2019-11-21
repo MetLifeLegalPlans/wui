@@ -42,6 +42,8 @@ PendingModal.propTypes = {
   onClose: PropTypes.func.isRequired,
   onClick: PropTypes.func,
   buttonText: PropTypes.string,
+
+  /** The message in the modal */
   children: PropTypes.node,
 };
 

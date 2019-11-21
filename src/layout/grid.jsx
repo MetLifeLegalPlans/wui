@@ -12,8 +12,11 @@ const reverseDirections = {
 
 class Grid extends React.PureComponent {
   static propTypes = {
+    /** @ignore */
     width: PropTypes.string.isRequired,
     reverseDirectionOnPhone: PropTypes.bool,
+
+    /** Corresponds to the `flex-shrink` CSS property */
     shrink: PropTypes.string,
   };
 
