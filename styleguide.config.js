@@ -2,6 +2,12 @@ const path = require('path');
 
 module.exports = {
   components: 'src/**/*.jsx',
+  ignore: [
+    'src/basics/closeButton.jsx',
+    'src/basics/link.jsx',
+    'src/basics/pendingModal.jsx',
+    'src/basics/slideShow.jsx',
+  ],
   sections: [
     {
       name: 'Getting Started',
@@ -25,7 +31,11 @@ module.exports = {
       ],
     },
   },
-  getComponentPathLine: componentPath => componentPath.replace('src/', '@bequestinc/wui/'),
+  getComponentPathLine: componentPath =>
+    componentPath
+      .replace('src/', '@bequestinc/wui/')
+      .replace('/index.jsx', '')
+      .replace('.jsx', ''),
   usageMode: 'expand',
   pagePerSection: true,
 };

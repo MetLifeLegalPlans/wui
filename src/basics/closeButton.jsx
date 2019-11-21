@@ -26,6 +26,9 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+/**
+ * A styled close button for use in modals. Does not manage state by itself.
+ */
 const CloseButton = ({ onClick, position }) => {
   const classes = useStyles();
   const className = classNames(classes.root, classes[`${position}Position`]);
