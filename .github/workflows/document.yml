@@ -25,7 +25,7 @@ jobs:
         run: yarn styleguidist build
       - name: Upload documentation
         working-directory: styleguide
-        run: aws s3 sync . s3://com.willing.storybook/
+        run: aws s3 sync . s3://com.willing.storybook/ --acl public-read
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.DOC_UPLOAD_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.DOC_UPLOAD_SECRET_KEY }}
