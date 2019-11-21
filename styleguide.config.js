@@ -3,6 +3,13 @@ const path = require('path');
 module.exports = {
   components: 'src/**/*.jsx',
   sections: [
+    {
+      name: 'Getting Started',
+      sections: [
+        { name: 'Quick Start', content: 'src/info/quickstart.md' },
+        { name: 'Installation', content: 'src/info/installation.md' },
+      ],
+    },
     { name: 'Basics', components: 'src/basics/*.jsx', sectionDepth: 2 },
     { name: 'Input', components: 'src/input/*.jsx', sectionDepth: 2 },
     { name: 'Layout', components: 'src/layout/*.jsx', sectionDepth: 2 },
