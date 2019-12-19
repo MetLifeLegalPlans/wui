@@ -28,6 +28,9 @@ const styles = theme => ({
   },
 });
 
+/**
+ * A countdown clock that optionally runs a function when it is finished.
+ */
 class Countdown extends React.Component {
   static propTypes = {
     /** The function to run when the countdown is complete */
