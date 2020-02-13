@@ -58,8 +58,7 @@
     }
   },
   "scripts": {
-    "storybook": "start-storybook -p 6007",
-    "build-storybook": "build-storybook",
+    "serve": "styleguidist server",
     "build": "babel src/ --out-dir dist",
     "lint": "eslint src/ --ext js,jsx",
     "fix": "eslint src/ --ext js,jsx --fix"
