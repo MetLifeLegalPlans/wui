@@ -19,6 +19,10 @@ module.exports = {
     { name: 'Basics', components: 'src/basics/*.jsx', sectionDepth: 2 },
     { name: 'Input', components: 'src/input/*.jsx', sectionDepth: 2 },
     { name: 'Layout', components: 'src/layout/*.jsx', sectionDepth: 2 },
+    {
+      name: 'Theme',
+      sections: [{ name: 'Colors', content: 'src/theme/colors.md' }],
+    },
   ],
   webpackConfig: {
     module: {

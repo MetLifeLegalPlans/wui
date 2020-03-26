@@ -17,6 +17,7 @@ const theme = createMuiTheme({
   },
   palette: {
     text: {
+      light: '#e2e2e2',
       error: redError,
       primary: '#333647',
       disabled: '#878992',
