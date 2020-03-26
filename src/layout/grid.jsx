@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MuiGrid from '@material-ui/core/Grid';
-import withWidth, { isWidthDown } from '@material-ui/core/withWidth';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import theme from '../theme';
 
 const reverseDirections = {
   row: 'row-reverse',
@@ -10,41 +11,47 @@ const reverseDirections = {
   'column-reverse': 'column',
 };
 
-class Grid extends React.PureComponent {
-  static propTypes = {
-    /** @ignore */
-    width: PropTypes.string.isRequired,
-    reverseDirectionOnPhone: PropTypes.bool,
+const Grid = ({ width, reverseDirectionOnPhone, shrink, grow, ...rest }) => {
+  const { direction: externalDirection = 'column', ...gridProps } = rest;
+  const phoneSize = useMediaQuery(theme.breakpoints.down('xs'));
+  const style = {};
 
-    /** Corresponds to the `flex-shrink` CSS property */
-    shrink: PropTypes.string,
-  };
-
-  static defaultProps = {
-    reverseDirectionOnPhone: false,
-    shrink: null,
-  };
-
-  render() {
-    const { reverseDirectionOnPhone, width, ...rest } = this.props;
-
-    const { direction: externalDirection = 'column', shrink, ...gridProps } = rest;
-
-    const style = {};
-
-    if (shrink !== null) {
-      style.flexShrink = shrink;
-    }
-
-    let direction = externalDirection;
-    if (isWidthDown('xs', width) && reverseDirectionOnPhone) {
-      direction = reverseDirections[direction];
-    }
-
-    const containerGridProps = gridProps.container ? { direction } : {};
-
-    return <MuiGrid {...gridProps} {...containerGridProps} style={style} />;
+  if (shrink !== null) {
+    style.flexShrink = shrink;
   }
-}
 
-export default withWidth()(Grid);
+  if (grow != null) {
+    style.flexGrow = grow;
+  }
+
+  let direction = externalDirection;
+  if (phoneSize && reverseDirectionOnPhone) {
+    direction = reverseDirections[direction];
+  }
+
+  const containerGridProps = gridProps.container ? { direction } : {};
+
+  return <MuiGrid {...gridProps} {...containerGridProps} style={style} />;
+};
+
+Grid.propTypes = {
+  /** @ignore */
+  width: PropTypes.string.isRequired,
+
+  /** Reverse directions for size xs */
+  reverseDirectionOnPhone: PropTypes.bool,
+
+  /** Corresponds to the `flex-shrink` CSS property */
+  shrink: PropTypes.string,
+
+  /** Corresponds to the `flex-grow` CSS property */
+  grow: PropTypes.number,
+};
+
+Grid.defaultProps = {
+  reverseDirectionOnPhone: false,
+  shrink: null,
+  grow: null,
+};
+
+export default Grid;
