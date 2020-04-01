@@ -24,3 +24,6 @@ sketch
 dist
 storybook-static
 styleguide
+
+# IntelliJ editors
+.idea
