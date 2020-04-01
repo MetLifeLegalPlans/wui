@@ -11,7 +11,7 @@ const reverseDirections = {
   'column-reverse': 'column',
 };
 
-const Grid = ({ width, reverseDirectionOnPhone, shrink, grow, ...rest }) => {
+const Grid = ({ reverseDirectionOnPhone, shrink, grow, ...rest }) => {
   const { direction: externalDirection = 'column', ...gridProps } = rest;
   const phoneSize = useMediaQuery(theme.breakpoints.down('xs'));
   const style = {};
@@ -35,9 +35,6 @@ const Grid = ({ width, reverseDirectionOnPhone, shrink, grow, ...rest }) => {
 };
 
 Grid.propTypes = {
-  /** @ignore */
-  width: PropTypes.string.isRequired,
-
   /** Reverse directions for size xs */
   reverseDirectionOnPhone: PropTypes.bool,
 
