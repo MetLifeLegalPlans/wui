@@ -7,8 +7,8 @@ import { withStyles } from '@material-ui/core/styles';
 import MuiRadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
-import Button from './button';
 import Typography from '@/basics/typography';
+import Button from './button';
 
 const defaultOptions = [
   [true, 'Yes'],
