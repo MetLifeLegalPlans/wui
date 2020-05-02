@@ -35,6 +35,9 @@ const Combobox = ({
 
   TextFieldComponent,
   dataPathOverride,
+
+  // Name for input element
+  name,
 }) => {
   const inputRef = useRef(null);
   const [inputValue, setInputValue] = useState(selected ? selected.label : '');
@@ -121,6 +124,7 @@ const Combobox = ({
           inputPropsModifier={inputPropsModifier}
           helperText={helperText}
           inputRef={inputRef}
+          name={name}
         />
 
         {isOpen && (
@@ -198,6 +202,9 @@ Combobox.propTypes = {
   mutateInputValue: PropTypes.func,
   TextFieldComponent: PropTypes.elementType,
   dataPathOverride: PropTypes.string,
+
+  /* Name for input element */
+  name: PropTypes.string,
 };
 
 Combobox.defaultProps = {
@@ -213,6 +220,7 @@ Combobox.defaultProps = {
   mutateInputValue: val => val,
   TextFieldComponent: Textbox,
   dataPathOverride: '',
+  name: '',
 };
 
 export default Combobox;
