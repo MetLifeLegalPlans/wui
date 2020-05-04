@@ -124,7 +124,9 @@ class RadioGroup extends React.Component {
         </Typography>
       );
 
-      const radio = <StyledRadio {...rest} data-value={value} color="primary" />;
+      const radio = (
+        <StyledRadio {...rest} onChange={this.dotsChanged} data-value={value} color="primary" />
+      );
 
       return (
         <FormControlLabel
