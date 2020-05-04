@@ -9,12 +9,11 @@ With Theme Color:
 
 ```jsx
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
-import { ThemeProvider } from '@material-ui/core/styles';
-import theme from '../theme';
+import { WuiThemeProvider } from '../theme';
 
-<ThemeProvider theme={theme}>
+<WuiThemeProvider>
   <CustomIcon src={CheckCircleIcon} color={theme => theme.palette.green.success} />
-</ThemeProvider>;
+</WuiThemeProvider>;
 ```
 
 With Size:

@@ -1,4 +1,5 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import React from 'react';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import planHealthMeterGradient from './planHealthMeter';
 
 import { addTypography } from './basics/typography';
@@ -203,5 +204,7 @@ theme.layout.disabledNode = {
   pointerEvents: 'none',
 };
 theme.layout.paperPadding = 32;
+
+export const WuiThemeProvider = props => <ThemeProvider {...props} theme={theme} />;
 
 export default theme;

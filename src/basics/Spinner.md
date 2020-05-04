@@ -7,13 +7,12 @@ Plain
 With theme colors
 
 ```jsx
-import { ThemeProvider } from '@material-ui/core/styles';
-import theme from '../theme';
+import { WuiThemeProvider } from '../theme';
 
-<ThemeProvider theme={theme}>
+<WuiThemeProvider>
   <Spinner
     color={theme => theme.palette.green.success}
     background={theme => theme.palette.common.white}
   />
-</ThemeProvider>;
+</WuiThemeProvider>;
 ```

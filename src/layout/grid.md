@@ -1,9 +1,9 @@
 ```jsx
-import { ThemeProvider } from '@material-ui/core/styles';
+import { WuiThemeProvider } from '../theme';
 import theme from '../theme';
 import BorderedBox from './borderedBox';
 
-<ThemeProvider theme={theme}>
+<WuiThemeProvider>
   <Grid container direction="row" reverseDirectionOnPhone>
     <Grid item xs={4}>
       <BorderedBox>LEFT</BorderedBox>
@@ -12,5 +12,5 @@ import BorderedBox from './borderedBox';
       <BorderedBox>RIGHT</BorderedBox>
     </Grid>
   </Grid>
-</ThemeProvider>;
+</WuiThemeProvider>;
 ```

@@ -1,8 +1,7 @@
 ```jsx
 import React, { useState } from 'react';
 import Button from './button';
-import { ThemeProvider } from '@material-ui/core/styles';
-import theme from '../theme';
+import { WuiThemeProvider } from '../theme';
 
 const options = [
   'Apple',
@@ -46,7 +45,7 @@ const Example = () => {
   );
 };
 
-<ThemeProvider theme={theme}>
+<WuiThemeProvider>
   <Example />
-</ThemeProvider>;
+</WuiThemeProvider>;
 ```

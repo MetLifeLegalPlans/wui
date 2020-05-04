@@ -1,8 +1,7 @@
 ```jsx
-import { ThemeProvider } from '@material-ui/core/styles';
-import theme from '../theme';
+import { WuiThemeProvider } from '../theme';
 
-<ThemeProvider theme={theme}>
+<WuiThemeProvider>
   <div style={{ position: 'relative' }}>
     <Modal
       open
@@ -16,5 +15,5 @@ import theme from '../theme';
       This is the content.
     </Modal>
   </div>
-</ThemeProvider>;
+</WuiThemeProvider>;
 ```
