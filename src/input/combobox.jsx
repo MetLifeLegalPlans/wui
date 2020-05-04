@@ -160,7 +160,7 @@ const Combobox = ({
     <Downshift
       onSelect={item => select(item.value || item.label)}
       itemToString={item => (item ? item.label : '')}
-      defaultHighlightedIndex={0}
+      initialHighlightedIndex={0}
     >
       {renderDownshift}
     </Downshift>
