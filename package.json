@@ -1,6 +1,6 @@
 {
   "name": "@bequestinc/wui",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "author": "Bequest, Inc.",
   "license": "MIT",
   "private": false,
@@ -36,14 +36,14 @@
   },
   "dependencies": {
     "@date-io/date-fns": "^1.3.11",
-    "@material-ui/core": "^4.6.1",
-    "@material-ui/icons": "^4.5.1",
-    "@material-ui/styles": "^4.6.0",
+    "@material-ui/core": "^4.9.12",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/styles": "^4.9.10",
     "classnames": "^2.2.6",
     "core-js": "2",
     "date-fns": "^2.8.0",
     "deepmerge": "^4.2.2",
-    "downshift": "2.0.9",
+    "downshift": "^5.2.4",
     "material-ui-pickers": "^2.2.4",
     "prop-types": "^15.7.2",
     "react-slick": "^0.25.2"
