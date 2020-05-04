@@ -1,12 +1,11 @@
 ```jsx
-import { ThemeProvider } from '@material-ui/core/styles';
-import theme from '../theme';
+import { WuiThemeProvider } from '../theme';
 
 const examples = {
   Standard: {},
 };
 
-<ThemeProvider theme={theme}>
+<WuiThemeProvider>
   <div>
     {Object.entries(examples).map(([name, props]) => (
       <BorderedBox key={name} {...props}>
@@ -14,5 +13,5 @@ const examples = {
       </BorderedBox>
     ))}
   </div>
-</ThemeProvider>;
+</WuiThemeProvider>;
 ```

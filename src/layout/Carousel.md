@@ -1,6 +1,5 @@
 ```jsx
-import { ThemeProvider } from '@material-ui/core/styles';
-import theme from '../theme';
+import { WuiThemeProvider } from '../theme';
 import { withStyles } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import Spacer from './spacer';
@@ -27,7 +26,7 @@ const slides = [
   </FullHeightPaper>
 ));
 
-<ThemeProvider theme={theme}>
+<WuiThemeProvider>
   <Carousel>{slides}</Carousel>
-</ThemeProvider>;
+</WuiThemeProvider>;
 ```

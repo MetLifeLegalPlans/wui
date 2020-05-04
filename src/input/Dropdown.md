@@ -1,14 +1,13 @@
 ```jsx
 import Spacer from '..//layout/spacer';
 import Typography from '../basics/typography';
-import { ThemeProvider } from '@material-ui/core/styles';
-import theme from '../theme';
+import { WuiThemeProvider } from '../theme';
 
 function onClick(option) {
   console.log(`You clicked: ${option.label}!`);
 }
 
-<ThemeProvider theme={theme}>
+<WuiThemeProvider>
   <Typography variant="medium">
     <Spacer inline h={100} />
     <Dropdown
@@ -20,5 +19,5 @@ function onClick(option) {
       ]}
     />
   </Typography>
-</ThemeProvider>;
+</WuiThemeProvider>;
 ```

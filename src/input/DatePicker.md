@@ -2,8 +2,7 @@
 import React from 'react';
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider } from 'material-ui-pickers';
-import { ThemeProvider } from '@material-ui/core/styles';
-import theme from '../theme';
+import { WuiThemeProvider } from '../theme';
 
 import DatePicker from './datePicker';
 
@@ -23,7 +22,7 @@ function log(date) {
   console.log(date);
 }
 
-<ThemeProvider theme={theme}>
+<WuiThemeProvider>
   <MuiPickersUtilsProvider utils={DateFnsUtils}>
     {Object.entries(textboxes).map(([name, props]) => (
       <div key={name}>
@@ -32,5 +31,5 @@ function log(date) {
       </div>
     ))}
   </MuiPickersUtilsProvider>
-</ThemeProvider>;
+</WuiThemeProvider>;
 ```

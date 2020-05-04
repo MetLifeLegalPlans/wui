@@ -1,19 +1,17 @@
 ```jsx
-import { ThemeProvider } from '@material-ui/core/styles';
-import theme from '../theme';
+import { WuiThemeProvider } from '../theme';
 
-<ThemeProvider theme={theme}>
+<WuiThemeProvider>
   <Checkbox label="Unchecked" />
   <Checkbox label="Unchecked disabled" disabled />
-</ThemeProvider>;
+</WuiThemeProvider>;
 ```
 
 ```jsx
-import { ThemeProvider } from '@material-ui/core/styles';
-import theme from '../theme';
+import { WuiThemeProvider } from '../theme';
 
-<ThemeProvider theme={theme}>
+<WuiThemeProvider>
   <Checkbox label="Checked" checked />
   <Checkbox label="Checked disabled" checked disabled />
-</ThemeProvider>;
+</WuiThemeProvider>;
 ```
