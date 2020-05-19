@@ -1,5 +1,10 @@
 import React from 'react';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import {
+  createMuiTheme,
+  createGenerateClassName,
+  ThemeProvider,
+  StylesProvider,
+} from '@material-ui/core/styles';
 import planHealthMeterGradient from './planHealthMeter';
 
 import { addTypography } from './basics/typography';
@@ -205,6 +210,14 @@ theme.layout.disabledNode = {
 };
 theme.layout.paperPadding = 32;
 
-export const WuiThemeProvider = props => <ThemeProvider {...props} theme={theme} />;
+const generateClassName = createGenerateClassName({
+  productionPrefix: 'wui-jss',
+});
+
+export const WuiThemeProvider = props => (
+  <StylesProvider generateClassName={generateClassName}>
+    <ThemeProvider {...props} theme={theme} />
+  </StylesProvider>
+);
 
 export default theme;
