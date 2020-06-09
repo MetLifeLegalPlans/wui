@@ -215,7 +215,7 @@ const generateClassName = createGenerateClassName({
 });
 
 export const WuiThemeProvider = props => (
-  <StylesProvider generateClassName={generateClassName}>
+  <StylesProvider generateClassName={generateClassName} serverGenerateClassName={generateClassName}>
     <ThemeProvider {...props} theme={theme} />
   </StylesProvider>
 );
