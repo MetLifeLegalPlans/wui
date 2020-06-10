@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {
   createMuiTheme,
   createGenerateClassName,
@@ -210,14 +210,20 @@ theme.layout.disabledNode = {
 };
 theme.layout.paperPadding = 32;
 
-const generateClassName = createGenerateClassName({
-  productionPrefix: 'wui-jss',
-});
-
-export const WuiThemeProvider = props => (
-  <StylesProvider generateClassName={generateClassName} serverGenerateClassName={generateClassName}>
-    <ThemeProvider {...props} theme={theme} />
-  </StylesProvider>
-);
+export const WuiThemeProvider = props => {
+  const generateClassName = useRef(
+    createGenerateClassName({
+      productionPrefix: 'wui-jss',
+    }),
+  );
+  return (
+    <StylesProvider
+      generateClassName={generateClassName.current}
+      serverGenerateClassName={generateClassName.current}
+    >
+      <ThemeProvider {...props} theme={theme} />
+    </StylesProvider>
+  );
+};
 
 export default theme;
