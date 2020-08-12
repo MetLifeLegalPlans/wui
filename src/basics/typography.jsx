@@ -128,8 +128,6 @@ function findVariant(variant) {
   return key => bodyDefinitions[key].aliases.includes(variant);
 }
 
-const CUSTOM_COLORS = ['disabled'];
-
 class Typography extends React.PureComponent {
   static propTypes = {
     /** MUI theme color */
@@ -158,6 +156,7 @@ class Typography extends React.PureComponent {
 
   render() {
     const { color, theme, variant, bold, indentLinesAfterFirst, ...props } = this.props;
+    const CUSTOM_COLORS = ['disabled', ...Object.keys(theme.palette.grey)];
 
     const { style: externalStyle, ...rest } = props;
 
@@ -166,7 +165,7 @@ class Typography extends React.PureComponent {
 
     if (CUSTOM_COLORS.includes(color)) {
       applicableColor = DEFAULT_COLOR;
-      style.color = theme.palette.text[color];
+      style.color = theme.palette.text[color] || theme.palette.grey[color];
     }
 
     if (bold !== null) {
