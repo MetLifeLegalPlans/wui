@@ -111,7 +111,7 @@ TabFiller.defaultProps = MuiTab.defaultProps;
 const tabShape = PropTypes.shape({
   special: PropTypes.bool,
   disabled: PropTypes.bool,
-  id: PropTypes.any,
+  id: PropTypes.string,
   name: PropTypes.node.isRequired,
   content: PropTypes.node.isRequired,
   noticeText: PropTypes.string,

@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
 
 export const optionShape = PropTypes.shape({
   label: PropTypes.string.isRequired,
-  value: PropTypes.any,
+  value: PropTypes.string,
   onClick: PropTypes.func,
 });
 
