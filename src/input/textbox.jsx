@@ -263,6 +263,7 @@ const Textbox = ({
   const { inputProps: InputPropsInputProps = {}, ...remainingInputProps } = InputProps || {};
 
   const combinedInputProps = {
+    'aria-label': label,
     ...InputPropsInputProps,
     ...inputProps,
   };
