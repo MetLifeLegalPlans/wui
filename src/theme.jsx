@@ -30,6 +30,9 @@ const theme = createMuiTheme({
       secondary: '#525252',
       superhero: inputText,
     },
+    error: {
+      main: '#DE0007',
+    },
     grey: {
       inputText,
       textboxBorder,
