@@ -1,0 +1,43 @@
+{
+  "name": "@bequestinc/wui",
+  "license": "MIT",
+  "version": "2.0.0",
+  "author": "Bequest, Inc.",
+  "private": false,
+  "scripts": {
+    "build": "babel src --out-dir lib --copy-files",
+    "prepublishOnly": "yarn run build",
+    "dev": "babel-node src/index.js",
+    "start": "NODE_ENV=production node lib/index.js",
+    "lint": "eslint ./src/",
+    "fix": "eslint ./src/ --fix"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib/*"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/eslint-parser": "^7.13.14",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.14.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-babel-module": "^5.3.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0"
+  },
+  "peerDependencies": {
+    "@material-ui/core": "^4.11.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "deepmerge": "^4.2.2"
+  }
+}
