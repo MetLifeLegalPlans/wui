@@ -79,13 +79,6 @@ const theme = createMuiTheme({
   },
 });
 
-// Add in breakpoint helpers by device type. It is easier
-//   to figure out what is going on when using these names.
-theme.breakpoints.phone = theme.breakpoints.down('xs');
-theme.breakpoints.tablet = theme.breakpoints.down('sm');
-theme.breakpoints.notPhone = theme.breakpoints.up('sm');
-theme.breakpoints.desktop = theme.breakpoints.up('md');
-
 // This must be done after the breakpoint helpers are
 //   set because they are used in the method.
 theme.typography = addTypography(theme);

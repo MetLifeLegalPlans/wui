@@ -105,7 +105,7 @@ export default function addTypography(theme) {
     definitions[variant] = makeStyle(desktop, 600);
 
     if (phone) {
-      definitions[variant][theme.breakpoints.phone] = makeStyle(phone, 600);
+      definitions[variant][theme.breakpoints.down('xs')] = makeStyle(phone, 600);
     }
   });
 
