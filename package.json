@@ -6,7 +6,6 @@
   "private": false,
   "scripts": {
     "build": "babel src --out-dir lib --copy-files",
-    "prepublishOnly": "yarn run build",
     "dev": "babel-node src/index.js",
     "start": "NODE_ENV=production node lib/index.js",
     "lint": "eslint ./src/",
