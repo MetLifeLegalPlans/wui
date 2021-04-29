@@ -18,8 +18,8 @@ jobs:
       - name: Build project
         run: yarn build
       - name: Copy package.json
-        run: cp -r package.json dist/
+        run: cp -r package.json lib/
       - name: Publish to NPM
-        run: yarn publish dist/ --non-interactive
+        run: yarn publish lib/ --non-interactive
         env:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
