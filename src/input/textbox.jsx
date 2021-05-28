@@ -161,7 +161,14 @@ const Textbox = ({
 }) => {
   const classes = useStyles();
 
-  const { style, onClick, InputProps, className: externalClassName, FormHelperTextProps, ...textFieldProps } = rest;
+  const {
+    style,
+    onClick,
+    InputProps,
+    className: externalClassName,
+    FormHelperTextProps,
+    ...textFieldProps
+  } = rest;
   const isSelect = Object.keys(options).length > 0;
 
   const renderSelectOptions = () => {
@@ -289,6 +296,7 @@ const Textbox = ({
           notchedOutline: classes.notchedOutline,
         },
       }}
+      id={label}
       fullWidth
       rows={rows}
       name={name}
@@ -311,7 +319,11 @@ const Textbox = ({
       autoComplete={autoComplete}
       InputLabelProps={inputLabelProps}
       error={Boolean(error)}
-      FormHelperTextProps={{ className: classes.helperText , ...FormHelperTextProps}}
+      FormHelperTextProps={{
+        className: classes.helperText,
+        'aria-live': 'assertive',
+        ...FormHelperTextProps,
+      }}
       helperText={error === true ? ' ' : error || helperText || ' '}
       {...textFieldProps}
     >
