@@ -161,7 +161,7 @@ const Textbox = ({
 }) => {
   const classes = useStyles();
 
-  const { style, onClick, InputProps, className: externalClassName } = rest;
+  const { style, onClick, InputProps, className: externalClassName, FormHelperTextProps, ...textFieldProps } = rest;
   const isSelect = Object.keys(options).length > 0;
 
   const renderSelectOptions = () => {
@@ -311,8 +311,9 @@ const Textbox = ({
       autoComplete={autoComplete}
       InputLabelProps={inputLabelProps}
       error={Boolean(error)}
-      FormHelperTextProps={{ className: classes.helperText }}
+      FormHelperTextProps={{ className: classes.helperText , ...FormHelperTextProps}}
       helperText={error === true ? ' ' : error || helperText || ' '}
+      {...textFieldProps}
     >
       {renderSelectOptions()}
     </MaterialTextField>
