@@ -106,7 +106,7 @@ class RadioGroup extends React.Component {
   };
 
   renderOption = ([value, displayText, description], pulse, rest) => {
-    const { dots, classes, disabled, value: selectedValue } = this.props;
+    const { dots, classes, disabled, value: selectedValue, label: labelText } = this.props;
     const selected = value === selectedValue;
 
     if (dots) {
@@ -125,7 +125,15 @@ class RadioGroup extends React.Component {
       );
 
       const radio = (
-        <StyledRadio {...rest} onChange={this.dotsChanged} data-value={value} color="primary" />
+        <StyledRadio
+          {...rest}
+          role="radio"
+          aria-checked={selected}
+          onChange={this.dotsChanged}
+          data-value={value}
+          color="primary"
+          inputProps={{ title: labelText }}
+        />
       );
 
       return (
@@ -156,6 +164,7 @@ class RadioGroup extends React.Component {
     return (
       <Grid item key={value}>
         <Button
+          aria-label={`${labelText} ${displayText}`}
           {...rest}
           noMinWidth
           {...buttonStyle}
@@ -191,7 +200,12 @@ class RadioGroup extends React.Component {
 
     if (dots) {
       return (
-        <MuiRadioGroup value={String(value)} onChange={this.dotsChanged}>
+        <MuiRadioGroup
+          role="radiogroup"
+          aria-labelledby={label}
+          value={String(value)}
+          onChange={this.dotsChanged}
+        >
           {renderedOptions}
         </MuiRadioGroup>
       );
@@ -206,8 +220,12 @@ class RadioGroup extends React.Component {
     );
 
     return (
-      <div className={className}>
-        {label && <Typography variant="intro">{label}</Typography>}
+      <div role="radiogroup" aria-labelledby={label} className={className}>
+        {label && (
+          <Typography id={label} variant="intro">
+            {label}
+          </Typography>
+        )}
 
         <Grid container spacing={2} className={classes.buttons}>
           {renderedOptions}
