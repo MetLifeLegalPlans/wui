@@ -5,12 +5,11 @@
   "author": "Bequest, Inc.",
   "private": false,
   "scripts": {
-    "build": "babel src --out-dir lib --copy-files",
+    "build": "babel src --out-dir lib --copy-files && cp ./package.json lib/",
     "dev": "babel-node src/index.js",
     "start": "NODE_ENV=production node lib/index.js",
     "lint": "eslint ./src/",
-    "fix": "eslint ./src/ --fix",
-    "prepublish": "yarn build && cp ./package.json lib/"
+    "fix": "eslint ./src/ --fix"
   },
   "files": [
     "lib/**/*"
