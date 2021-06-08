@@ -1,7 +1,7 @@
 {
   "name": "@bequestinc/wui",
   "license": "MIT",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "author": "Bequest, Inc.",
   "private": false,
   "scripts": {
@@ -9,9 +9,12 @@
     "dev": "babel-node src/index.js",
     "start": "NODE_ENV=production node lib/index.js",
     "lint": "eslint ./src/",
-    "fix": "eslint ./src/ --fix"
+    "fix": "eslint ./src/ --fix",
+    "prepublish": "yarn build && cp ./package.json lib/"
   },
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "main": "lib/index.js",
   "devDependencies": {
     "@babel/cli": "^7.13.16",
