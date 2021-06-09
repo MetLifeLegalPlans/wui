@@ -1,4 +1,6 @@
+import React from 'react';
 import { createMuiTheme } from '@material-ui/core/styles';
+import HelpOutline from '@material-ui/icons/HelpOutline';
 
 import addTypography from './typography-utils';
 
@@ -30,6 +32,10 @@ const theme = createMuiTheme({
       variant: 'outlined',
       fullWidth: true,
       margin: 'normal',
+    },
+
+    MuiTooltip: {
+      children: <HelpOutline />,
     },
   },
   overrides: {

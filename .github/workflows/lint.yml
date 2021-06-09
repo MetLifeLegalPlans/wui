@@ -13,6 +13,6 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Install peer dependencies
-        run: yarn add --peer --pure-lockfile @material-ui/core react react-dom
+        run: yarn add --peer --pure-lockfile @material-ui/core @material-ui/icons react react-dom
       - name: Run linter
         run: yarn lint
