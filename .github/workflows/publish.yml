@@ -2,8 +2,8 @@ name: Publish NPM Package
 
 'on':
   push:
-    tags:
-      - v*
+    branhces:
+      - master
 
 jobs:
   publish:
