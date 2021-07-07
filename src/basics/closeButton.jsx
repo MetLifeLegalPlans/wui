@@ -23,6 +23,10 @@ const useStyles = makeStyles(theme => ({
     '&$middlePosition': {
       bottom: 0,
     },
+
+    '&:focus': {
+      border: '1px dotted black',
+    },
   },
 }));
 
@@ -34,7 +38,7 @@ const CloseButton = ({ onClick, position }) => {
   const className = classNames(classes.root, classes[`${position}Position`]);
 
   return (
-    <button type="button" onClick={onClick} className={className}>
+    <button aria-label="close" type="button" onClick={onClick} className={className}>
       &#x2715;
     </button>
   );
