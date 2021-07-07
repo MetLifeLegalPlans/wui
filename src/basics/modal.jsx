@@ -76,7 +76,6 @@ class Modal extends React.PureComponent {
 
             {onClose && <CloseButton onClick={onClose} />}
           </Typography>
-
           <Typography component="div" className={classes.content}>
             {children}
           </Typography>
