@@ -144,6 +144,7 @@ const Textbox = ({
   label,
   value,
   options,
+  optional,
   disabled,
   inputRef,
   autoFocus,
@@ -271,6 +272,7 @@ const Textbox = ({
 
   const combinedInputProps = {
     'aria-label': label,
+    'aria-required': String(!optional),
     ...InputPropsInputProps,
     ...inputProps,
   };
@@ -295,6 +297,7 @@ const Textbox = ({
           focused: classes.focused,
           notchedOutline: classes.notchedOutline,
         },
+        required: !optional,
       }}
       id={label}
       fullWidth
@@ -375,6 +378,9 @@ Textbox.propTypes = {
      valid values. */
   hideEmptyOption: PropTypes.bool,
 
+  /** If optional is false, the field is marked as required */
+  optional: PropTypes.bool,
+
   /** A value to use for the input element's
      `data-path` property. If unset, the
      path for the component is used. */
@@ -419,6 +425,7 @@ Textbox.defaultProps = {
   label: null,
   value: null,
   options: {},
+  optional: false,
   type: 'text',
   disabled: false,
   autoFocus: false,
