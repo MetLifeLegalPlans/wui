@@ -165,6 +165,8 @@ class RadioGroup extends React.Component {
       <Grid item key={value}>
         <Button
           aria-label={`${labelText} ${displayText}`}
+          role="radio"
+          aria-checked={selected ? 'true' : 'false'}
           {...rest}
           noMinWidth
           {...buttonStyle}
