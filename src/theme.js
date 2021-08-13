@@ -5,6 +5,9 @@ import HelpOutline from '@material-ui/icons/HelpOutline';
 import addTypography from './typography-utils';
 
 const theme = createMuiTheme({
+  typography: {
+    fontFamily: '"MetlifeCircularWeb", "Roboto", "Helvetica", "Arial", sans-serif',
+  },
   palette: {
     primary: {
       dark: '#2a3e82',

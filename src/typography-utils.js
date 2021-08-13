@@ -10,50 +10,55 @@ import deepmerge from 'deepmerge';
 export const headerDefinitions = {
   h1: {
     desktop: [
-      40,
-      42,
+      44,
+      50,
       {
-        letterSpacing: 0.28,
+        letterSpacing: -0.46,
       },
     ],
-    phone: [28, 32],
+    phone: [
+      28,
+      38,
+      {
+        letterSpacing: -0.63,
+      },
+    ],
   },
   h2: {
     desktop: [
       32,
-      42,
+      40,
       {
         marginBottom: 8,
-        letterSpacing: 0.22,
+        letterSpacing: -0.46,
       },
     ],
-    phone: [24, 32],
+    phone: [24, 30, { letterSpacing: -0.34 }],
   },
   h3: {
-    desktop: [28, 39],
-    phone: [24, 39],
+    desktop: [28, 40],
+    phone: [24, 30, { letterSpacing: -0.34 }],
   },
   h4: {
     desktop: [
-      24,
-      39,
+      32,
+      30,
       {
         marginBottom: 4,
       },
     ],
-    phone: [22, 39],
   },
   h5: {
     desktop: [
       22,
-      32,
+      30,
       {
         marginBottom: 4,
       },
     ],
   },
   h6: {
-    desktop: [18, 28],
+    desktop: [18, 22],
   },
 };
 
@@ -61,22 +66,22 @@ export const bodyDefinitions = {
   subtitle1: {
     aliases: ['superhero'],
     color: 'superhero',
-    style: [24, 34],
+    style: [20, 30],
   },
   body1: {
     aliases: ['intro'],
     color: 'secondary',
-    style: [18, 28],
+    style: [18, 32, { fontFamily: '"Noto Sans", "Roboto", sans-serif' }],
   },
   body2: {
     aliases: ['medium', 'default'],
     color: 'secondary',
-    style: [16, 26],
+    style: [16, 30, { fontFamily: '"Noto Sans", "Roboto", sans-serif' }],
   },
   caption: {
     aliases: ['regular'],
     color: 'secondary',
-    style: [14, 24],
+    style: [20, 30],
   },
 };
 
