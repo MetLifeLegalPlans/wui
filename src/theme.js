@@ -1,10 +1,13 @@
 import React from 'react';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@material-ui/core/styles';
 import HelpOutline from '@material-ui/icons/HelpOutline';
 
 import addTypography from './typography-utils';
 
-const theme = createMuiTheme({
+const theme = createTheme({
+  typography: {
+    fontFamily: '"MetlifeCircularWeb", "Roboto", "Helvetica", "Arial", sans-serif',
+  },
   palette: {
     primary: {
       dark: '#2a3e82',
