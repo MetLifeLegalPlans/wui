@@ -23,7 +23,7 @@ export default withStyles(styles)(
       <form {...props} className={className}>
         {children}
 
-        <Typography color="error" className={classes.error}>
+        <Typography color="error" aria-live="assertive" className={classes.error}>
           {error}
         </Typography>
       </form>
