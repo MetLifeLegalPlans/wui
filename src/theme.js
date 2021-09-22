@@ -1,7 +1,7 @@
 import React from 'react';
-import { createTheme } from '@material-ui/core/styles';
-import HelpOutline from '@material-ui/icons/HelpOutline';
-
+import HelpOutline from '@mui/icons-material/HelpOutline';
+import { createMakeStyles } from 'tss-react';
+import { createTheme } from '@mui/material/styles';
 import addTypography from './typography-utils';
 
 const theme = createTheme({
@@ -89,4 +89,8 @@ const theme = createTheme({
 //   set because they are used in the method.
 theme.typography = addTypography(theme);
 
-export default theme;
+function useTheme() {
+  return theme;
+}
+
+export const { makeStyles, useStyles } = createMakeStyles({ useTheme });
