@@ -89,8 +89,5 @@ const theme = createTheme({
 //   set because they are used in the method.
 theme.typography = addTypography(theme);
 
-function useTheme() {
-  return theme;
-}
-
+const useTheme = () => theme;
 export const { makeStyles, useStyles } = createMakeStyles({ useTheme });
