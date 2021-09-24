@@ -90,4 +90,7 @@ const theme = createTheme({
 theme.typography = addTypography(theme);
 
 const useTheme = () => theme;
-export const { makeStyles, useStyles } = createMakeStyles({ useTheme });
+
+const { makeStyles, useStyles } = createMakeStyles({ useTheme });
+
+export { makeStyles, useStyles, theme };
