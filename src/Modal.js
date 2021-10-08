@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 
 import { makeStyles } from './theme';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles()(theme => ({
   title: {
     padding: theme.spacing(2),
   },
