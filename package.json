@@ -9,7 +9,9 @@
     "dev": "babel-node src/index.js",
     "start": "NODE_ENV=production node lib/index.js",
     "lint": "eslint ./src/",
-    "fix": "eslint ./src/ --fix"
+    "fix": "eslint ./src/ --fix",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "main": "lib/index.js",
   "devDependencies": {
@@ -19,6 +21,15 @@
     "@babel/node": "^7.13.13",
     "@babel/preset-env": "^7.14.0",
     "@babel/preset-react": "^7.13.13",
+    "@material-ui/core": "^5.0.0-beta.5",
+    "@mui/icons-material": "^5.0.1",
+    "@mui/material": "^5.0.1",
+    "@storybook/addon-actions": "^6.4.1",
+    "@storybook/addon-docs": "^6.3.8",
+    "@storybook/addon-essentials": "^6.4.1",
+    "@storybook/addon-links": "^6.4.1",
+    "@storybook/react": "^6.4.1",
+    "babel-loader": "^8.2.3",
     "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^7.25.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -28,10 +39,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.0",
-    "@material-ui/core": "^5.0.0-beta.5",
-    "@mui/icons-material": "^5.0.1",
-    "@mui/material": "^5.0.1"
+    "pretty-quick": "^3.1.0"
   },
   "peerDependencies": {
     "@material-ui/core": "^5.0.0-beta.5",
@@ -43,8 +51,10 @@
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "tss-react": "^0.9.3",
     "deepmerge": "^4.2.2",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tss-react": "^0.9.3"
   }
 }
