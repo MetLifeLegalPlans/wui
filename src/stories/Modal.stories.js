@@ -10,6 +10,7 @@ export default {
 const Template = args => <Modal {...args} />;
 
 export const ModalScreen = Template.bind({});
+
 ModalScreen.args = {
   title: 'title',
   open: true,
