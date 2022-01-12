@@ -148,6 +148,8 @@ const Combobox = ({
               disableRestoreFocus: true,
               keepMounted: true,
               refKey: 'listRef',
+              autoFocus: false,
+              disableEnforceFocus: true,
             })}
           />
         )}
