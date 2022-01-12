@@ -73,7 +73,14 @@ class Dropdown extends React.Component {
 
     return (
       <React.Fragment>
-        <TextLink href="#" color="inherit" {...underlineProps} onClick={this.onClickLink}>
+        <TextLink
+          aria-haspopup="true"
+          aria-expanded={anchorElement ? 'true' : undefined}
+          href="#"
+          color="inherit"
+          {...underlineProps}
+          onClick={this.onClickLink}
+        >
           {label}
         </TextLink>
         <DropdownMenu
