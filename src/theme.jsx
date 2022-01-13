@@ -229,4 +229,14 @@ export const WuiThemeProvider = props => {
   );
 };
 
+const generateClassName = createGenerateClassName({
+  productionPrefix: 'wui-jss',
+});
+
+export const StaticWuiThemeProvider = props => (
+  <StylesProvider generateClassName={generateClassName} serverGenerateClassName={generateClassName}>
+    <ThemeProvider {...props} theme={theme} />
+  </StylesProvider>
+);
+
 export default theme;
