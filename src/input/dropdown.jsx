@@ -7,12 +7,15 @@ import DropdownMenu, { optionShape } from '@/layout/dropdownMenu';
 class Dropdown extends React.Component {
   static propTypes = {
     disabled: PropTypes.bool,
-    label: PropTypes.node.isRequired,
+    renderButton: PropTypes.func,
+    label: PropTypes.node,
     options: PropTypes.arrayOf(optionShape).isRequired,
   };
 
   static defaultProps = {
     disabled: false,
+    renderButton: null,
+    label: null,
   };
 
   state = {
@@ -59,7 +62,7 @@ class Dropdown extends React.Component {
 
   render() {
     const { anchorElement } = this.state;
-    const { label, options } = this.props;
+    const { label, options, renderButton } = this.props;
 
     if (options.length === 1) {
       return (
@@ -73,16 +76,21 @@ class Dropdown extends React.Component {
 
     return (
       <React.Fragment>
-        <TextLink
-          aria-haspopup="true"
-          aria-expanded={anchorElement ? 'true' : undefined}
-          href="#"
-          color="inherit"
-          {...underlineProps}
-          onClick={this.onClickLink}
-        >
-          {label}
-        </TextLink>
+        {renderButton ? (
+          renderButton({ onClick: this.onClickLink, open: Boolean(anchorElement) })
+        ) : (
+          <TextLink
+            aria-haspopup="true"
+            aria-expanded={anchorElement ? 'true' : undefined}
+            href="#"
+            color="inherit"
+            {...underlineProps}
+            onClick={this.onClickLink}
+          >
+            {label}
+          </TextLink>
+        )}
+
         <DropdownMenu
           onClose={this.onClose}
           anchorEl={anchorElement}
