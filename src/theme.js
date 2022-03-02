@@ -1,6 +1,6 @@
 import React from 'react';
 import HelpOutline from '@mui/icons-material/HelpOutline';
-import { createMakeStyles } from 'tss-react';
+import { createMakeAndWithStyles } from 'tss-react';
 import { createTheme } from '@mui/material/styles';
 import addTypography from './typography-utils';
 
@@ -91,6 +91,6 @@ theme.typography = addTypography(theme);
 
 const useTheme = () => theme;
 
-const { makeStyles, useStyles } = createMakeStyles({ useTheme });
+const { makeStyles, withStyles } = createMakeAndWithStyles({ useTheme });
 
-export { makeStyles, useStyles, theme };
+export { makeStyles, withStyles, theme };
