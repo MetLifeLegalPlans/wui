@@ -1,7 +1,7 @@
 {
   "name": "@bequestinc/wui",
   "license": "MIT",
-  "version": "3.2.1",
+  "version": "3.3.1",
   "author": "Bequest, Inc.",
   "private": false,
   "scripts": {
@@ -39,21 +39,19 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.0"
+    "pretty-quick": "^3.1.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "peerDependencies": {
     "@mui/icons-material": "^5.0.1",
-    "@mui/material": "^5.6.2",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "@mui/material": "^5.6.2"
   },
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
     "deepmerge": "^4.2.2",
     "prop-types": "^15.7.2",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
     "tss-react": "^3.4.2"
   }
 }
