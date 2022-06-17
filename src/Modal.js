@@ -11,16 +11,8 @@ import Typography from '@mui/material/Typography';
 import { makeStyles } from './theme';
 
 const useStyles = makeStyles()(theme => ({
-  title: {
-    padding: theme.spacing(2),
-  },
   content: {
     padding: theme.spacing(2),
-  },
-  closeButton: {
-    position: 'absolute',
-    right: theme.spacing(1),
-    top: theme.spacing(1),
   },
 }));
 
@@ -29,12 +21,22 @@ const Modal = ({ title, open, onClose, children, ...props }) => {
 
   return (
     <Dialog onClose={onClose} open={open} {...props}>
-      <DialogTitle className={classes.title}>
+      <DialogTitle
+        sx={{
+          display: 'flex',
+        }}
+      >
         <Typography variant="h6" component="div">
           {title}
         </Typography>
 
-        <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
+        <IconButton
+          aria-label="close"
+          onClick={onClose}
+          sx={{
+            marginLeft: 'auto',
+          }}
+        >
           <CloseIcon />
         </IconButton>
       </DialogTitle>
