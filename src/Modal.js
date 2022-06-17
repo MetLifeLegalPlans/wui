@@ -29,8 +29,11 @@ const Modal = ({ title, open, onClose, children, ...props }) => {
 
   return (
     <Dialog onClose={onClose} open={open} {...props}>
-      <DialogTitle disableTypography className={classes.title}>
-        <Typography variant="h6">{title}</Typography>
+      <DialogTitle className={classes.title}>
+        <Typography variant="h6" component="div">
+          {title}
+        </Typography>
+
         <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
           <CloseIcon />
         </IconButton>
