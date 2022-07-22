@@ -25,14 +25,14 @@ const customComparator = (reverse, orderColumnBy) =>
     : (a, b) => -getInDescOrder(a, b, orderColumnBy);
 
 const sortRecords = (tableRecords, comparator) => {
-  const tobeSortedRecords = tableRecords.map((record, i) => [record, i]);
-  tobeSortedRecords.sort((a, b) => {
+  const toBeSortedRecords = tableRecords.map((record, i) => [record, i]);
+  toBeSortedRecords.sort((a, b) => {
     const newOrder = comparator(a[0], b[0]);
     if (newOrder !== 0) return newOrder;
     return a[1] - b[1];
   });
 
-  return tobeSortedRecords.map(record => record[0]);
+  return toBeSortedRecords.map(record => record[0]);
 };
 
 const Body = ({ records, reverse, orderBy, page, rowsPerPage, onRowClick, fields }) => {
