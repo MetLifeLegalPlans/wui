@@ -13,10 +13,12 @@ const useStyles = makeStyles()(() => ({
 const Header = ({ headCells, reverse, orderBy, setReverse, setOrderBy }) => {
   const { classes } = useStyles();
 
-  const handleSortRequest = headRowId => {
-    const isAsc = orderBy === headRowId && !reverse;
-    setReverse(isAsc);
-    setOrderBy(headRowId);
+  const handleSortRequest = headRow => {
+    if (headRow.sortable) {
+      const isAsc = orderBy === headRow.id && !reverse;
+      setReverse(isAsc);
+      setOrderBy(headRow.id);
+    }
   };
 
   return (
@@ -31,8 +33,8 @@ const Header = ({ headCells, reverse, orderBy, setReverse, setOrderBy }) => {
           >
             <TableSortLabel
               active={orderBy === headRow.id}
-              direction={orderBy === headRow.id ? 'desc' : 'asc'}
-              onClick={() => handleSortRequest(headRow.id)}
+              direction={orderBy === headRow.id && reverse ? 'desc' : 'asc'}
+              onClick={() => handleSortRequest(headRow)}
             >
               {headRow.label}
             </TableSortLabel>

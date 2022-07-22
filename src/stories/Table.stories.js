@@ -3,13 +3,9 @@ import React from 'react';
 import Table from '../table';
 
 const testHeadings = [
-  { id: 'columnOne', label: 'Column One' },
-  { id: 'columnTwo', label: 'Column Two' },
+  { id: 'columnOne', label: 'Column One', sortable: true },
+  { id: 'columnTwo', label: 'Column Two', sortable: false },
 ];
-
-const headings = {
-  test_headings: testHeadings,
-};
 
 const tableData = [
   {
@@ -41,7 +37,7 @@ const tableData = [
 
 const WuiTable = props => (
   <Table {...props}>
-    <Table.Header headCells={headings.test_headings} />
+    <Table.Header headCells={testHeadings} />
     <Table.Body records={tableData} />
     <Table.Pagination recordsLength={tableData.length} />
   </Table>
