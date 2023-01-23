@@ -1,21 +1,21 @@
 {
-  "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "targets": {
-          "node": "current"
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
         }
-      }
+      ],
+      "@babel/preset-react"
     ],
-    "@babel/preset-react"
-  ],
-  "plugins": [
-    [
-      "module-resolver",
-      {
-        "root": ["./src"]
-      }
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "root": ["./src"]
+        }
+      ]
     ]
-  ]
-}
+  }

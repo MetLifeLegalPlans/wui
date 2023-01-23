@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
 
-import { makeStyles } from './theme';
+import { makeStyles } from '../theme';
 
 const useStyles = makeStyles()(theme => ({
   content: {

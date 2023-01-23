@@ -5,14 +5,20 @@ name: Lint
 jobs:
   lint:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16]
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
         with:
-          node-version: '15.x'
+          version: 7
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
       - name: Install dependencies
-        run: yarn install
-      - name: Install peer dependencies
-        run: yarn add --peer --pure-lockfile @material-ui/core @material-ui/icons react react-dom
+        run: pnpm install
       - name: Run linter
-        run: yarn lint
+        run: pnpm lint
