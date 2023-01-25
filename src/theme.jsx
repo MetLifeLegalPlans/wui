@@ -1,6 +1,6 @@
 import React from 'react';
 import HelpOutline from '@mui/icons-material/HelpOutline';
-import { createMakeAndWithStyles } from "tss-react";
+import { createMakeAndWithStyles } from 'tss-react';
 import { createTheme } from '@mui/material/styles';
 import addTypography from './typography-utils';
 

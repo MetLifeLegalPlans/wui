@@ -1,9 +1,20 @@
 {
   "name": "@bequestinc/wui",
   "license": "MIT",
-  "version": "4.1.1",
+  "version": "5.0.0",
   "author": "Bequest, Inc.",
   "private": false,
+  "main": "dist/wui.umd.js",
+  "module": "dist/wui.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/wui.es.js",
+      "require": "./dist/wui.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "vite build",

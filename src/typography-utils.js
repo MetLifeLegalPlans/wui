@@ -1,4 +1,5 @@
 import deepmerge from 'deepmerge';
+
 // Each outer key is the variant. The value is a dictionary
 //   with keys for each breakpoint. The inner value is an
 //   array, where the items in order are:
