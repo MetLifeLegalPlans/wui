@@ -1,7 +1,7 @@
 {
   "name": "@bequestinc/wui",
   "license": "MIT",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "author": "Bequest, Inc.",
   "private": false,
   "main": "dist/wui.umd.js",
@@ -32,7 +32,7 @@
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.5",
-    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-actions": "^6.1.15",
     "@storybook/addon-docs": "^6.5.15",
     "@storybook/addon-essentials": "^6.5.15",
     "@storybook/addon-links": "^6.5.15",
@@ -50,6 +50,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
     "vite": "^3.1.0"
   },
   "peerDependencies": {
@@ -57,11 +58,14 @@
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.0.1",
     "@mui/material": "^5.11.5",
+    "@mui/x-date-pickers": "^6.19.0",
     "react": "^18.0.0",
+    "react-hot-toast": "^2.4.1",
     "react-dom": "^18.0.0"
   },
   "dependencies": {
     "deepmerge": "^4.2.2",
-    "tss-react": "^4.5.2"
+    "tss-react": "^4.5.2",
+    "material-react-table": "^2.0.3"
   }
 }
