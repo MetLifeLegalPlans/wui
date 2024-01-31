@@ -29,7 +29,6 @@ const styles = theme => ({
     letterSpacing: 0.5,
     position: 'relative',
     textTransform: 'none',
-    borderRadius: theme.dimensions.borderRadius,
 
     [theme.breakpoints.phone]: {
       minWidth: 'auto',
@@ -42,17 +41,24 @@ const styles = theme => ({
         backgroundColor: 'transparent',
       },
     },
+    '&:focus': {
+      border: [[2, 'solid', 'white']],
+      outline: [[2, 'solid', '#2A4283']],
+      borderRadius: 0,
+    },
   },
   text: {
-    padding: 0,
+    padding: 4,
     fontSize: 18,
     minWidth: 'auto',
     lineHeight: '28px',
     color: theme.palette.text.secondary,
+    textDecoration: 'underline',
+    width: 'fit-content',
 
     '&:hover, &:focus': {
       background: 'none',
-      textDecoration: 'underline',
+      textDecoration: 'none',
     },
   },
   contained: {
@@ -72,7 +78,8 @@ const styles = theme => ({
 
     '&:focus': {
       boxShadow: 'none',
-      background: theme.palette.blue.focus,
+      backgroundColor: '#2A4283',
+      borderRadius: 3,
     },
 
     '&$disabled:hover, &$disabled': {
@@ -106,8 +113,7 @@ const styles = theme => ({
     },
 
     '&:focus': {
-      borderColor: theme.palette.blue.default,
-      background: theme.palette.background.default,
+      color: '#3752A9',
     },
 
     '&$disabled:hover, &$disabled': {

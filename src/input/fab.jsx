@@ -10,7 +10,6 @@ import Typography from '@/basics/typography';
 const side = 44;
 const border = 6;
 const textMargin = 8;
-const hoverIncrease = 4;
 
 const styles = theme => ({
   // Used to modify other classes.
@@ -54,25 +53,19 @@ const styles = theme => ({
     justifyContent: 'center',
     color: theme.palette.common.white,
     boxShadow: theme.customShadows.fab,
-    background: theme.palette.blue.textboxFocus,
+    background: '#3752A9',
 
     '$root:hover &, $root$focusVisible &': {
       boxShadow: theme.customShadows.fabHover,
       background: theme.palette.blue.checkboxCheck,
     },
 
-    '$root:hover &': {
-      minWidth: side + hoverIncrease,
-      minHeight: side + hoverIncrease,
-      margin: [[0, (border - hoverIncrease) * 2]],
-    },
-
     '$root$focusVisible &': {
       margin: 0,
       boxShadow: 'none',
-      minWidth: side + border * 2,
-      minHeight: side + border * 2,
-      border: [[6, 'solid', '#dfe9fd']],
+      border: [[2, 'solid', '#FFFFFF']],
+      outline: [[2, 'solid', '#2A4283']],
+      backgroundColor: '#2A4283',
     },
   },
   icon: {
