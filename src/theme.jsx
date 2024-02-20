@@ -50,7 +50,7 @@ const theme = createMuiTheme({
       hover: '#5a74d3',
       focus: '#304386',
       banner: '#e1e9ef',
-      default: '#3f5ab8',
+      default: '#3752a9',
       disabled: '#8c9cd5',
       checkboxCheck: '#0065ff',
       noticeBackground: '#dfe9fd',
@@ -82,6 +82,13 @@ const theme = createMuiTheme({
     standard: '0 5px 25px 1px rgba(0, 0, 0, 0.06)',
     buttonHover: '0 5px 25px 1px rgba(0, 0, 0, 0.28)',
     inset: 'inset 0 1px 3px 0 rgba(162, 162, 162, 0.5)',
+  },
+  focus: {
+    native: [
+      // https://css-tricks.com/copy-the-browsers-native-focus-styles/
+      { outline: '5px auto Highlight' },
+      { outline: '5px auto -webkit-focus-ring-color' },
+    ],
   },
   zIndex: {
     above: 900,
