@@ -73,6 +73,8 @@ const styles = theme => ({
     '&:focus': {
       boxShadow: 'none',
       background: theme.palette.blue.focus,
+      outlineOffset: 4,
+      fallbacks: theme.focus.native,
     },
 
     '&$disabled:hover, &$disabled': {
