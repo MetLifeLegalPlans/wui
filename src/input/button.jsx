@@ -50,9 +50,15 @@ const styles = theme => ({
     lineHeight: '28px',
     color: theme.palette.text.secondary,
 
-    '&:hover, &:focus': {
+    '&:hover, &:active': {
       background: 'none',
       textDecoration: 'underline',
+    },
+
+    '&:focus': {
+      outline: `5px auto ${theme.palette.blue.active}`,
+      outlineOffset: 4,
+      textDecoration: 'none',
     },
   },
   contained: {
