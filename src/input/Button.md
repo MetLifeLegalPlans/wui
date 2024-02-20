@@ -5,5 +5,9 @@ import { WuiThemeProvider } from '../theme';
   <Button variant="contained" color="primary" onClick={() => null}>
     Create my plan now
   </Button>
+
+  <br />
+
+  <Button>Default</Button>
 </WuiThemeProvider>;
 ```
