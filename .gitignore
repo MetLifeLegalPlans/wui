@@ -27,3 +27,6 @@ styleguide
 
 # IntelliJ editors
 .idea
+
+# ASDF version manager
+.tool-versions
