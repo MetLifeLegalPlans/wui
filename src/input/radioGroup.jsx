@@ -75,6 +75,7 @@ class RadioGroup extends React.Component {
     classes: PropTypes.shape({}).isRequired,
     withDeselectedBackground: PropTypes.bool,
     value: PropTypes.oneOfType([PropTypes.bool, PropTypes.number, PropTypes.string]),
+    // eslint-disable-next-line react/forbid-prop-types
     options: PropTypes.arrayOf(PropTypes.array),
     pulseFirstOption: PropTypes.bool,
   };
