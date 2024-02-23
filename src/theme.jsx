@@ -13,8 +13,8 @@ const inputText = '#595959';
 const greenSuccess = '#1bc092';
 const redError = '#ff5959';
 const textboxBorder = '#c5cdd5';
-const textboxFocus = '#4c84f5';
-const panelBorder = '#DBDCE2';
+const textboxFocus = '#2A4283';
+const panelBorder = '#D5DFE8';
 const unselectedTab = '#f4f5f7';
 
 const theme = createMuiTheme({
@@ -22,10 +22,15 @@ const theme = createMuiTheme({
     fontFamily: ['AvertaPE', 'Roboto'],
   },
   palette: {
+    primary: {
+      light: '#5975D4',
+      main: '#3752A9',
+      dark: '#2A4283',
+    },
     text: {
       light: '#e2e2e2',
       error: redError,
-      primary: '#333647',
+      primary: '#2A2C2E',
       disabled: '#878992',
       secondary: '#525252',
       superhero: inputText,
@@ -40,7 +45,7 @@ const theme = createMuiTheme({
       bannerBorder: '#d3dde4',
       unselectedTab,
       panelBorder,
-      placeholderText: '#989898',
+      placeholderText: '#B1B8BE',
       disabledButtonBorder: '#cbcfd4',
       modalBackground: 'rgba(244, 245, 247, 0.64)',
       lightBackground: '#fafafa',
