@@ -82,6 +82,8 @@ const useStyles = makeStyles(theme => ({
   inputRoot: {
     '&$focused $notchedOutline': {
       borderColor: theme.palette.blue.textboxFocus,
+      fallbacks: theme.focus.native,
+      outlineOffset: 4,
     },
     '&:hover': {
       borderColor: theme.palette.text.primary,
