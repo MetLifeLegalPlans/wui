@@ -45,6 +45,10 @@ const tabStyles = theme => ({
     textTransform: 'none',
     color: theme.palette.text.secondary,
 
+    '&:focus': {
+      fallbacks: theme.focus.native,
+    },
+
     '&$selected': {
       fontWeight: 600,
       color: theme.palette.text.primary,
