@@ -50,6 +50,10 @@ const tabStyles = theme => ({
     '&:first-child': {
       borderLeft: [[1, 'solid', theme.palette.grey.panelBorder]],
     },
+
+    '&:focus': {
+      fallbacks: theme.focus.native,
+    },
   },
   selected: {
     fontWeight: 600,
