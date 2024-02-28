@@ -57,7 +57,7 @@ const theme = createMuiTheme({
       banner: '#e1e9ef',
       default: '#3752a9',
       disabled: '#8c9cd5',
-      checkboxCheck: '#0065ff',
+      checkboxCheck: '#213166',
       noticeBackground: '#dfe9fd',
       active: '#3c59ba',
     },

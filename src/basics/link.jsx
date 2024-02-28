@@ -18,6 +18,10 @@ const useStyles = makeStyles(theme => ({
     '&:hover': {
       color: theme.palette.blue.checkboxCheck,
     },
+
+    '&:active': {
+      color: theme.palette.blue.active,
+    },
   },
 }));
 
