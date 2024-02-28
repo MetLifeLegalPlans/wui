@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { withTheme } from '@material-ui/core/styles';
 import MuiTypography from '@material-ui/core/Typography';
 
-const DEFAULT_COLOR = 'initial';
+const DEFAULT_COLOR = '#525252';
 
 // Each outer key is the variant. The value is a dictionary
 //   with keys for each breakpoint. The inner value is an
