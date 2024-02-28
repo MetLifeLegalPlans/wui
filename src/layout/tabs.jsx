@@ -165,6 +165,7 @@ class Tabs extends React.Component {
       tabsFillWidth,
       smallTabs,
       borderless,
+      ...props
     } = this.props;
 
     const selectedTab = tabs[selected] || {};
@@ -196,6 +197,7 @@ class Tabs extends React.Component {
                 />
               ),
             }}
+            {...props}
           >
             {tabs.map(t => (
               <WuiTab
