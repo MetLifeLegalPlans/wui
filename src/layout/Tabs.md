@@ -10,11 +10,7 @@ const tabs = [
 const TabsExample = () => {
   const [tab, setTab] = useState(tabs[0].id);
 
-  return (
-    <React.Fragment>
-      <Tabs tabs={tabs} selected={tab} onSelect={id => setTab(id)} />
-    </React.Fragment>
-  );
+  return <Tabs tabs={tabs} selected={tab} onSelect={id => setTab(id)} smallTabs />;
 };
 
 <WuiThemeProvider>
