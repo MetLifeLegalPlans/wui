@@ -125,6 +125,7 @@ const Combobox = ({
           helperText={helperText}
           inputRef={inputRef}
           name={name}
+          role="combobox"
         />
 
         {isOpen && (
