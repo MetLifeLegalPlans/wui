@@ -10,12 +10,14 @@ class Dropdown extends React.Component {
     renderButton: PropTypes.func,
     label: PropTypes.node,
     options: PropTypes.arrayOf(optionShape).isRequired,
+    linkProps: PropTypes.shape({}),
   };
 
   static defaultProps = {
     disabled: false,
     renderButton: null,
     label: null,
+    linkProps: {},
   };
 
   state = {
@@ -62,7 +64,7 @@ class Dropdown extends React.Component {
 
   render() {
     const { anchorElement } = this.state;
-    const { label, options, renderButton } = this.props;
+    const { label, options, renderButton, linkProps } = this.props;
 
     if (options.length === 1) {
       return (
@@ -86,6 +88,7 @@ class Dropdown extends React.Component {
             color="inherit"
             {...underlineProps}
             onClick={this.onClickLink}
+            {...linkProps}
           >
             {label}
           </TextLink>
