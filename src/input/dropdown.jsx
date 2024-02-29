@@ -68,7 +68,7 @@ class Dropdown extends React.Component {
 
     if (options.length === 1) {
       return (
-        <TextLink href="#" color="inherit" onClick={this.onClickOption(options[0])}>
+        <TextLink href="#" color="inherit" onClick={this.onClickOption(options[0])} {...linkProps}>
           {options[0].label}
         </TextLink>
       );
