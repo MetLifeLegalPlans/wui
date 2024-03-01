@@ -5,3 +5,4 @@ export { default as ConfirmDeleteButton } from './components/ConfirmDeleteButton
 export { default as CustomTable } from './components/table/CustomTable.jsx';
 export { default as CustomTableWithActions } from './components/table/CustomTableWithActions.jsx';
 export { useMaterialReactTable } from 'material-react-table';
+export { MaterialReactTable } from 'material-react-table';
