@@ -11,13 +11,19 @@ import CheckboxUncheckedActiveUrl from '@a/images/checkbox-unchecked-active.svg'
 import CheckboxChecked from '@a/images/checkbox-checked.svg';
 import CheckboxUnchecked from '@a/images/checkbox-unchecked.svg';
 
-const muiCheckboxStyles = {
+const muiCheckboxStyles = theme => ({
   root: {
     padding: 0,
     marginLeft: 14,
     marginRight: 12,
+    color: ['rgba(0,0,0,0)', '!important'],
+
+    '&:focus-within': {
+      outlineOffset: 4,
+      fallbacks: theme.focus.native,
+    },
   },
-};
+});
 
 const labelStyles = theme => ({
   root: {
