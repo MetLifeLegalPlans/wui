@@ -45,7 +45,7 @@ const tabStyles = theme => ({
     textTransform: 'none',
     color: theme.palette.text.secondary,
 
-    '&:focus': {
+    '&:focus-visible': {
       fallbacks: theme.focus.native,
     },
 

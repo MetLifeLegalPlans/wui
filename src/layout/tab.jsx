@@ -51,7 +51,7 @@ const tabStyles = theme => ({
       borderLeft: [[1, 'solid', theme.palette.grey.panelBorder]],
     },
 
-    '&:focus': {
+    '&:focus-visible': {
       fallbacks: theme.focus.native,
     },
   },

@@ -55,9 +55,12 @@ const styles = theme => ({
       textDecoration: 'underline',
     },
 
-    '&:focus': {
+    '&:focus-visible': {
       outline: `5px auto ${theme.palette.blue.active}`,
       outlineOffset: 4,
+    },
+
+    '&:focus': {
       textDecoration: 'none',
     },
   },
@@ -79,6 +82,9 @@ const styles = theme => ({
     '&:focus': {
       boxShadow: 'none',
       background: theme.palette.blue.focus,
+    },
+
+    '&:focus-visible': {
       outlineOffset: 4,
       fallbacks: theme.focus.native,
     },
