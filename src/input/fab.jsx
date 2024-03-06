@@ -67,7 +67,7 @@ const styles = theme => ({
       margin: [[0, (border - hoverIncrease) * 2]],
     },
 
-    '$root:focus &': {
+    '$root:focus-visible &': {
       fallbacks: theme.focus.native,
       outlineOffset: 4,
     },
