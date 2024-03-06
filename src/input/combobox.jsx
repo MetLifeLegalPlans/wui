@@ -35,6 +35,7 @@ const Combobox = ({
 
   TextFieldComponent,
   dataPathOverride,
+  focusOpensMenu,
 
   // Name for input element
   name,
@@ -86,7 +87,9 @@ const Combobox = ({
 
     const focusInput = e => {
       onFocus(e);
-      openMenu(e);
+      if (focusOpensMenu) {
+        openMenu(e);
+      }
     };
 
     const blurInput = e => {
@@ -206,6 +209,9 @@ Combobox.propTypes = {
   TextFieldComponent: PropTypes.elementType,
   dataPathOverride: PropTypes.string,
 
+  /** Open the menu on focus */
+  focusOpensMenu: PropTypes.bool,
+
   /* Name for input element */
   name: PropTypes.string,
 };
@@ -223,6 +229,7 @@ Combobox.defaultProps = {
   mutateInputValue: val => val,
   TextFieldComponent: Textbox,
   dataPathOverride: '',
+  focusOpensMenu: true,
   name: '',
 };
 
