@@ -26,6 +26,7 @@ const Combobox = ({
   helperText,
   onBlur,
   onFocus,
+  optional,
 
   // Unfocus the text field after selecting something
   blurOnSelect,
@@ -120,6 +121,7 @@ const Combobox = ({
     return (
       <div>
         <TextFieldComponent
+          optional={optional}
           error={error}
           label={label}
           value={inputValue}
