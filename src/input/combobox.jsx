@@ -201,6 +201,9 @@ Combobox.propTypes = {
   /** Text field props */
   onFocus: PropTypes.func,
 
+  /** Text field props */
+  optional: PropTypes.bool,
+
   /** Unfocus the text field after selecting something */
   blurOnSelect: PropTypes.bool,
 
@@ -225,6 +228,7 @@ Combobox.defaultProps = {
   helperText: '',
   onBlur: () => null,
   onFocus: () => null,
+  optional: false,
   blurOnSelect: true,
   mutateInputValue: val => val,
   TextFieldComponent: Textbox,
