@@ -15,6 +15,9 @@
   "files": [
     "dist"
   ],
+  "engines": {
+    "node": ">=16.0.0 <=21.6.0"
+  },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "vite build",
