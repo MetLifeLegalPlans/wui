@@ -334,7 +334,7 @@ const Textbox = ({
         'aria-live': 'assertive',
         ...FormHelperTextProps,
       }}
-      helperText={error === true ? ' ' : error || helperText || ' '}
+      helperText={error === true ? helperText : error || helperText || ' '}
       {...textFieldProps}
     >
       {renderSelectOptions()}
