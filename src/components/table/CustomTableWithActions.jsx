@@ -102,6 +102,7 @@ const CustomTableWithActions = ({
             {editAction && (
               <Tooltip arrow placement="right" title="Edit">
                 <IconButton
+                  disabled={editAction.isDisabled?.(row.original) || false}
                   onClick={e => {
                     e.stopPropagation();
                     editAction.handleEdit(row.original);
