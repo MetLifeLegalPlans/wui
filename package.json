@@ -1,11 +1,12 @@
 {
   "name": "@bequestinc/wui",
   "license": "MIT",
-  "version": "5.1.3",
+  "version": "5.1.4",
   "author": "Bequest, Inc.",
   "private": false,
   "main": "dist/wui.umd.js",
   "module": "dist/wui.es.js",
+  "type":"module",
   "exports": {
     ".": {
       "import": "./dist/wui.es.js",

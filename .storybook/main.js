@@ -1,4 +1,4 @@
-const path = require('path');
+import path from 'path';
 
 // Location of root node_modules
 const modulesDir = path.join(process.cwd(), 'node_modules');
