@@ -331,7 +331,7 @@ const Textbox = ({
       error={Boolean(error)}
       FormHelperTextProps={{
         className: classes.helperText,
-        'aria-live': 'assertive',
+        role: 'alert',
         ...FormHelperTextProps,
       }}
       helperText={error === true ? helperText : error || helperText || ' '}
