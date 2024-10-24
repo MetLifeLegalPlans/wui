@@ -4,5 +4,5 @@ export { default as Modal } from './components/Modal.jsx';
 export { default as ConfirmDeleteButton } from './components/ConfirmDeleteButton.jsx';
 export { default as CustomTable } from './components/table/CustomTable.jsx';
 export { default as CustomTableWithActions } from './components/table/CustomTableWithActions.jsx';
-export { useMaterialReactTable } from 'material-react-table';
-export { MaterialReactTable } from 'material-react-table';
+// this is temporary until we have the time to move our custom components above to v3
+export * as MRT from 'material-react-table';
