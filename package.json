@@ -1,7 +1,7 @@
 {
   "name": "@bequestinc/wui",
   "license": "MIT",
-  "version": "5.2.4",
+  "version": "5.2.5",
   "author": "Bequest, Inc.",
   "private": false,
   "main": "dist/wui.umd.js",
@@ -69,7 +69,7 @@
   },
   "dependencies": {
     "deepmerge": "^4.2.2",
-    "material-react-table": "^2.0.3",
+    "material-react-table": "^2.13.3",
     "tss-react": "^4.5.2"
   }
 }
