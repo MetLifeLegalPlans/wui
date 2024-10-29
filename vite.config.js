@@ -17,12 +17,19 @@ export default defineConfig({
       external: [...Object.keys(packageJson.peerDependencies)],
       output: {
         globals: {
-          react: 'React',
+          'react': 'React',
           'react-dom': 'ReactDOM',
-          '@emotion/react': 'ReactEmotion',
-          '@emotion/styled': 'emStyled',
-        },
+
+          '@mui/material': 'MUI',
+          '@mui/icons-material': 'MuiIcons',
+          '@mui/x-date-pickers': 'MuiXDatePickers',
+          '@emotion/react': 'emotionReact',
+          '@emotion/styled': 'emotionStyled',
+
+          'react-hot-toast': 'ReactHotToast'
+        }
       },
-    },
+
+    }
   },
 });
