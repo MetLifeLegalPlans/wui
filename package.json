@@ -36,6 +36,7 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.15.20",
+    "@mui/x-date-pickers": "^7.22.0",
     "@storybook/addon-actions": "^8.1.10",
     "@storybook/addon-docs": "^8.1.10",
     "@storybook/addon-essentials": "^8.1.10",
