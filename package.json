@@ -1,7 +1,7 @@
 {
   "name": "@bequestinc/wui",
   "license": "MIT",
-  "version": "5.2.5",
+  "version": "5.2.6",
   "author": "Bequest, Inc.",
   "private": false,
   "main": "dist/wui.umd.js",

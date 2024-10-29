@@ -19,7 +19,7 @@ jobs:
         with:
           version: 7
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --prod
       - name: Build project
         run: pnpm build
       - name: Publish to NPM
