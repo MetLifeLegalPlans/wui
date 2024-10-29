@@ -14,22 +14,28 @@ export default defineConfig({
       fileName: format => `wui.${format}.js`,
     },
     rollupOptions: {
-      external: [...Object.keys(packageJson.peerDependencies)],
+      external: [
+        '@emotion/react',
+        '@emotion/styled',
+        '@mui/icons-material',
+        '@mui/material',
+        '@mui/x-date-pickers',
+        'react',
+        'react-dom',
+        'react-hot-toast',
+      ],
       output: {
         globals: {
-          'react': 'React',
+          react: 'React',
           'react-dom': 'ReactDOM',
-
-          '@mui/material': 'MUI',
-          '@mui/icons-material': 'MuiIcons',
-          '@mui/x-date-pickers': 'MuiXDatePickers',
           '@emotion/react': 'emotionReact',
           '@emotion/styled': 'emotionStyled',
-
-          'react-hot-toast': 'ReactHotToast'
-        }
+          '@mui/material': 'MaterialUI',
+          '@mui/icons-material': 'MaterialUIIcons',
+          '@mui/x-date-pickers': 'MaterialUIXDatePickers',
+          'react-hot-toast': 'toast',
+        },
       },
-
-    }
+    },
   },
 });
