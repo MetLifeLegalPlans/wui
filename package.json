@@ -71,6 +71,6 @@
   "dependencies": {
     "deepmerge": "^4.2.2",
     "material-react-table": "^2.13.3",
-    "tss-react": "^4.5.2"
+    "tss-react": "4.5.2"
   }
 }
