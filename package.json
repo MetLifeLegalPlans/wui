@@ -1,12 +1,11 @@
 {
   "name": "@bequestinc/wui",
   "license": "MIT",
-  "version": "5.2.8",
+  "version": "5.2.9",
   "author": "Bequest, Inc.",
   "private": false,
   "main": "dist/wui.umd.js",
   "module": "dist/wui.es.js",
-  "type":"module",
   "exports": {
     ".": {
       "import": "./dist/wui.es.js",
@@ -55,7 +54,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
-    "vite": "^5.3.1",
+    "vite": "3.1.0",
     "@mui/x-date-pickers": "^6.19.0"
   },
   "peerDependencies": {
